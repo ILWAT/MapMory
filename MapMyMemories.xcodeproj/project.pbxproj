@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4675B0914184588098E10F50 /* Pods_MapMyMemories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */; };
 		DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393B2AC1954D0099D1AA /* AppDelegate.swift */; };
 		DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */; };
 		DE8939402AC1954D0099D1AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393F2AC1954D0099D1AA /* ViewController.swift */; };
@@ -20,9 +21,16 @@
 		DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939622AC19CB50099D1AA /* Extension+UIColor.swift */; };
 		DE8939652AC19DF20099D1AA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DE8939642AC19DF20099D1AA /* .gitignore */; };
 		DE8939672AC19E6A0099D1AA /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939662AC19E6A0099D1AA /* APIKeys.swift */; };
+		DE89396B2AC1B1F80099D1AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89396A2AC1B1F80099D1AA /* BaseViewController.swift */; };
+		DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89396E2AC320C60099D1AA /* BaseMapView.swift */; };
+		DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939712AC324940099D1AA /* HomeViewController.swift */; };
+		DE8939742AC326540099D1AA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939732AC326540099D1AA /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C17EBF444A77AA63B0490BA /* Pods-MapMyMemories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyMemories.release.xcconfig"; path = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.release.xcconfig"; sourceTree = "<group>"; };
+		45AA7D376B33E8B0471AABFE /* Pods-MapMyMemories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyMemories.debug.xcconfig"; path = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.debug.xcconfig"; sourceTree = "<group>"; };
+		B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapMyMemories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8939382AC1954D0099D1AA /* MapMyMemories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyMemories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE89393B2AC1954D0099D1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +41,10 @@
 		DE8939622AC19CB50099D1AA /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
 		DE8939642AC19DF20099D1AA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE8939662AC19E6A0099D1AA /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		DE89396A2AC1B1F80099D1AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DE89396E2AC320C60099D1AA /* BaseMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapView.swift; sourceTree = "<group>"; };
+		DE8939712AC324940099D1AA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DE8939732AC326540099D1AA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +57,37 @@
 				DE8939542AC1974A0099D1AA /* Realm in Frameworks */,
 				DE8939612AC19A3B0099D1AA /* Toast in Frameworks */,
 				DE8939512AC196DD0099D1AA /* SnapKit in Frameworks */,
+				4675B0914184588098E10F50 /* Pods_MapMyMemories.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E69C173CDD12DFC205B126B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2965B25092C4D0D06B0B9EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				45AA7D376B33E8B0471AABFE /* Pods-MapMyMemories.debug.xcconfig */,
+				3C17EBF444A77AA63B0490BA /* Pods-MapMyMemories.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DE89392F2AC1954D0099D1AA = {
 			isa = PBXGroup;
 			children = (
 				DE89393A2AC1954D0099D1AA /* MapMyMemories */,
 				DE8939392AC1954D0099D1AA /* Products */,
+				C2965B25092C4D0D06B0B9EA /* Pods */,
+				7E69C173CDD12DFC205B126B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +126,8 @@
 		DE8939582AC197640099D1AA /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				DE8939702AC324850099D1AA /* Home */,
+				DE8939692AC1B1830099D1AA /* Base */,
 				DE89393F2AC1954D0099D1AA /* ViewController.swift */,
 			);
 			path = Scene;
@@ -131,6 +165,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		DE8939692AC1B1830099D1AA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DE89396A2AC1B1F80099D1AA /* BaseViewController.swift */,
+				DE89396E2AC320C60099D1AA /* BaseMapView.swift */,
+				DE8939732AC326540099D1AA /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DE8939702AC324850099D1AA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DE8939712AC324940099D1AA /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE89394C2AC1954F0099D1AA /* Build configuration list for PBXNativeTarget "MapMyMemories" */;
 			buildPhases = (
+				12ADEEB3018162E02FA8F200 /* [CP] Check Pods Manifest.lock */,
 				DE8939342AC1954D0099D1AA /* Sources */,
 				DE8939352AC1954D0099D1AA /* Frameworks */,
 				DE8939362AC1954D0099D1AA /* Resources */,
+				B183098CBE28EE39F41217E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +264,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12ADEEB3018162E02FA8F200 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MapMyMemories-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B183098CBE28EE39F41217E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE8939342AC1954D0099D1AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,8 +314,12 @@
 				DE8939402AC1954D0099D1AA /* ViewController.swift in Sources */,
 				DE8939672AC19E6A0099D1AA /* APIKeys.swift in Sources */,
 				DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */,
+				DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */,
 				DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */,
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
+				DE8939742AC326540099D1AA /* BaseView.swift in Sources */,
+				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
+				DE89396B2AC1B1F80099D1AA /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +372,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -336,9 +437,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -360,12 +462,14 @@
 		};
 		DE89394D2AC1954F0099D1AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45AA7D376B33E8B0471AABFE /* Pods-MapMyMemories.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AYG8MBJF93;
+				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapMyMemories/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
@@ -392,12 +496,14 @@
 		};
 		DE89394E2AC1954F0099D1AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C17EBF444A77AA63B0490BA /* Pods-MapMyMemories.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AYG8MBJF93;
+				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapMyMemories/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
