@@ -8,13 +8,27 @@
 import UIKit
 
 final class HomeViewController: BaseViewController{
+    //MARK: - Properties
+    let mainView = HomeView()
     
-    
-    override func configure() {
-        
+    //MARK: - LifeCycle
+    override func loadView() {
+        view = mainView
     }
     
+    
+    
+    //MARK: - Configure
+    override func configure() {
+    }
+    
+    
+    //MARK: - SetNavigation
     override func setNavigation() {
         
     }
+    
+    //MARK: - Action
+    
+    //MARK: - Helper
 }
