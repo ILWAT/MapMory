@@ -11,7 +11,7 @@ import SnapKit
 
 class BaseMapView: BaseView{
     //MARK: - Properties
-    lazy var mapView = NMFMapView(frame: self.frame)
+    lazy var mapView = NMFNaverMapView(frame: .zero)
     
     //MARK: - Configure
     ///맵뷰를 기본적으로 포함하고 있다.
