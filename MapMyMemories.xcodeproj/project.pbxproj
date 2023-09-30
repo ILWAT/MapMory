@@ -25,6 +25,8 @@
 		DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89396E2AC320C60099D1AA /* BaseMapView.swift */; };
 		DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939712AC324940099D1AA /* HomeViewController.swift */; };
 		DE8939742AC326540099D1AA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939732AC326540099D1AA /* BaseView.swift */; };
+		DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939862AC499A00099D1AA /* MemoryDB.swift */; };
+		DE8939892AC4A4DB0099D1AA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939882AC4A4DA0099D1AA /* RealmManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		DE89396E2AC320C60099D1AA /* BaseMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapView.swift; sourceTree = "<group>"; };
 		DE8939712AC324940099D1AA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DE8939732AC326540099D1AA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		DE8939862AC499A00099D1AA /* MemoryDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryDB.swift; path = MapMyMemories/MemoryDB.swift; sourceTree = SOURCE_ROOT; };
+		DE8939882AC4A4DA0099D1AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		DE89393A2AC1954D0099D1AA /* MapMyMemories */ = {
 			isa = PBXGroup;
 			children = (
+				DE89398A2AC4A6AA0099D1AA /* Helper */,
 				DE8939682AC19EE00099D1AA /* Network */,
 				DE89395B2AC197760099D1AA /* Resource */,
 				DE89395A2AC197710099D1AA /* Extension */,
@@ -136,6 +141,7 @@
 		DE8939592AC1976B0099D1AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE8939862AC499A00099D1AA /* MemoryDB.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				DE8939662AC19E6A0099D1AA /* APIKeys.swift */,
+				DE8939882AC4A4DA0099D1AA /* RealmManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -181,6 +188,13 @@
 				DE8939712AC324940099D1AA /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DE89398A2AC4A6AA0099D1AA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,12 +327,14 @@
 			files = (
 				DE8939402AC1954D0099D1AA /* ViewController.swift in Sources */,
 				DE8939672AC19E6A0099D1AA /* APIKeys.swift in Sources */,
+				DE8939892AC4A4DB0099D1AA /* RealmManager.swift in Sources */,
 				DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */,
 				DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */,
 				DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */,
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
 				DE8939742AC326540099D1AA /* BaseView.swift in Sources */,
 				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
+				DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */,
 				DE89396B2AC1B1F80099D1AA /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
