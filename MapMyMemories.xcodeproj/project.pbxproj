@@ -10,7 +10,6 @@
 		4675B0914184588098E10F50 /* Pods_MapMyMemories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */; };
 		DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393B2AC1954D0099D1AA /* AppDelegate.swift */; };
 		DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */; };
-		DE8939402AC1954D0099D1AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393F2AC1954D0099D1AA /* ViewController.swift */; };
 		DE8939452AC1954F0099D1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8939442AC1954F0099D1AA /* Assets.xcassets */; };
 		DE8939482AC1954F0099D1AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8939462AC1954F0099D1AA /* LaunchScreen.storyboard */; };
 		DE8939512AC196DD0099D1AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE8939502AC196DD0099D1AA /* SnapKit */; };
@@ -27,6 +26,9 @@
 		DE8939742AC326540099D1AA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939732AC326540099D1AA /* BaseView.swift */; };
 		DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939862AC499A00099D1AA /* MemoryDB.swift */; };
 		DE8939892AC4A4DB0099D1AA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939882AC4A4DA0099D1AA /* RealmManager.swift */; };
+		DE8939912AC860C00099D1AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939902AC860C00099D1AA /* HomeView.swift */; };
+		DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939922AC8617A0099D1AA /* AppViewController.swift */; };
+		DE8939952AC8989F0099D1AA /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939942AC8989F0099D1AA /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,6 @@
 		DE8939382AC1954D0099D1AA /* MapMyMemories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyMemories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE89393B2AC1954D0099D1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE89393F2AC1954D0099D1AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE8939442AC1954F0099D1AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE8939472AC1954F0099D1AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE8939492AC1954F0099D1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		DE8939732AC326540099D1AA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		DE8939862AC499A00099D1AA /* MemoryDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryDB.swift; path = MapMyMemories/MemoryDB.swift; sourceTree = SOURCE_ROOT; };
 		DE8939882AC4A4DA0099D1AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		DE8939902AC860C00099D1AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DE8939922AC8617A0099D1AA /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		DE8939942AC8989F0099D1AA /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 			children = (
 				DE89393B2AC1954D0099D1AA /* AppDelegate.swift */,
 				DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */,
+				DE8939922AC8617A0099D1AA /* AppViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -133,7 +138,6 @@
 			children = (
 				DE8939702AC324850099D1AA /* Home */,
 				DE8939692AC1B1830099D1AA /* Base */,
-				DE89393F2AC1954D0099D1AA /* ViewController.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				DE8939622AC19CB50099D1AA /* Extension+UIColor.swift */,
+				DE8939942AC8989F0099D1AA /* Extension+UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				DE8939712AC324940099D1AA /* HomeViewController.swift */,
+				DE8939902AC860C00099D1AA /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -325,17 +331,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE8939402AC1954D0099D1AA /* ViewController.swift in Sources */,
 				DE8939672AC19E6A0099D1AA /* APIKeys.swift in Sources */,
 				DE8939892AC4A4DB0099D1AA /* RealmManager.swift in Sources */,
 				DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */,
 				DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */,
 				DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */,
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
+				DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */,
 				DE8939742AC326540099D1AA /* BaseView.swift in Sources */,
 				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
+				DE8939912AC860C00099D1AA /* HomeView.swift in Sources */,
 				DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */,
 				DE89396B2AC1B1F80099D1AA /* BaseViewController.swift in Sources */,
+				DE8939952AC8989F0099D1AA /* Extension+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
