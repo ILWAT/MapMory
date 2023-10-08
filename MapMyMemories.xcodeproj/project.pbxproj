@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4675B0914184588098E10F50 /* Pods_MapMyMemories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */; };
+		DE43BD3C2ACE866200FD81DD /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */; };
+		DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */; };
 		DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393B2AC1954D0099D1AA /* AppDelegate.swift */; };
 		DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */; };
 		DE8939452AC1954F0099D1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8939442AC1954F0099D1AA /* Assets.xcassets */; };
@@ -29,12 +31,16 @@
 		DE8939912AC860C00099D1AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939902AC860C00099D1AA /* HomeView.swift */; };
 		DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939922AC8617A0099D1AA /* AppViewController.swift */; };
 		DE8939952AC8989F0099D1AA /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939942AC8989F0099D1AA /* Extension+UIView.swift */; };
+		DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216C2AC959DE00B00A26 /* WriteView.swift */; };
+		DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216E2AC959E900B00A26 /* WriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C17EBF444A77AA63B0490BA /* Pods-MapMyMemories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyMemories.release.xcconfig"; path = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.release.xcconfig"; sourceTree = "<group>"; };
 		45AA7D376B33E8B0471AABFE /* Pods-MapMyMemories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyMemories.debug.xcconfig"; path = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.debug.xcconfig"; sourceTree = "<group>"; };
 		B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapMyMemories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		DE8939382AC1954D0099D1AA /* MapMyMemories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyMemories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE89393B2AC1954D0099D1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,8 @@
 		DE8939902AC860C00099D1AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DE8939922AC8617A0099D1AA /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		DE8939942AC8989F0099D1AA /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		DEBB216C2AC959DE00B00A26 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		DEBB216E2AC959E900B00A26 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +95,14 @@
 				3C17EBF444A77AA63B0490BA /* Pods-MapMyMemories.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE43BD3A2ACE864F00FD81DD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DE89392F2AC1954D0099D1AA = {
@@ -136,6 +152,7 @@
 		DE8939582AC197640099D1AA /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				DEBB216B2AC959BE00B00A26 /* Write */,
 				DE8939702AC324850099D1AA /* Home */,
 				DE8939692AC1B1830099D1AA /* Base */,
 			);
@@ -155,6 +172,7 @@
 			children = (
 				DE8939622AC19CB50099D1AA /* Extension+UIColor.swift */,
 				DE8939942AC8989F0099D1AA /* Extension+UIView.swift */,
+				DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -201,6 +219,16 @@
 			children = (
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		DEBB216B2AC959BE00B00A26 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				DE43BD3A2ACE864F00FD81DD /* Cell */,
+				DEBB216C2AC959DE00B00A26 /* WriteView.swift */,
+				DEBB216E2AC959E900B00A26 /* WriteViewController.swift */,
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,10 +361,14 @@
 			files = (
 				DE8939672AC19E6A0099D1AA /* APIKeys.swift in Sources */,
 				DE8939892AC4A4DB0099D1AA /* RealmManager.swift in Sources */,
+				DE43BD3C2ACE866200FD81DD /* ImageCollectionViewCell.swift in Sources */,
 				DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */,
+				DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */,
+				DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */,
 				DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */,
 				DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */,
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
+				DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */,
 				DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */,
 				DE8939742AC326540099D1AA /* BaseView.swift in Sources */,
 				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
