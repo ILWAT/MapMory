@@ -16,7 +16,6 @@
 			dependencies = (
 			);
 			name = NMapsGeometry;
-			productName = NMapsGeometry;
 		};
 		8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */ = {
 			isa = PBXAggregateTarget;
@@ -25,136 +24,181 @@
 				B521269790554904B95202DE2D5AC59C /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
-				258F097AFE79EE06421A954BF7063DC2 /* PBXTargetDependency */,
+				31B1BA3DF935DA8BFE992E6E65E6C14D /* PBXTargetDependency */,
 			);
 			name = NMapsMap;
-			productName = NMapsMap;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		17B99E3D2030C34B8615FF9A6213E45C /* Pods-MapMyMemories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B0F8C4FC389F80080874548D86AB57 /* Pods-MapMyMemories-dummy.m */; };
-		535CAD46E02537E8A72D181731A43FF6 /* Pods-MapMyMemories-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0B665DFAE40E3F4B10E04F5E545B95 /* Pods-MapMyMemories-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A469C5FB1F5C823FD547999EEFC0AD53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		013A0B965FB7F20BD0F87E8871221253 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE36DEFE00FAEBB1D00EBBC9824D0FD /* FloatyItem.swift */; };
+		197533DE6434BAC49762D75A4E774AB6 /* Floaty-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C605B6F6255539AE46AD5747F22F2C9 /* Floaty-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		224183C41F3E7E35EE13E9CD3BB36938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		36EDF538E419A9721571437C7F1CA6DD /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696A3A9192DD08A48E1C272C7ECDEB04 /* FloatyViewController.swift */; };
+		44C66CD860C074077671169981D8FD1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		72C98C8817A912FB7038531F576548C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		8091A6D5D32B94B079733D9D09EAE747 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A9CEC3C2DD2A0F60279B69F5FF020 /* FloatyDelegate.swift */; };
+		AE2667975318F94678EA2EF0C5022D20 /* Pods-MapMyMemories-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0B665DFAE40E3F4B10E04F5E545B95 /* Pods-MapMyMemories-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA7F3C2E65B19F2F4BCBFF5567024BAF /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0EB8BB3B2E5276AF51ED35136022E /* FloatyManager.swift */; };
+		CFF48002B4CCD5968D20995F40D1F9E8 /* Pods-MapMyMemories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B0F8C4FC389F80080874548D86AB57 /* Pods-MapMyMemories-dummy.m */; };
+		D3214C9C78BB1008BBE89C1F11A42B77 /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EEADA3C04E49F6AB0D8E6E2FEB228 /* Floaty.swift */; };
+		D9FB3A64C227528D834DF04B1D14583C /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42250A4A2D9AF3302DD1F5E29E762BB /* FloatyWindow.swift */; };
+		E660E9ACA165C6A86576E1DFE587AA53 /* UIView+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE84C60C0E43662ABC1F8845FECA7E /* UIView+Draggable.swift */; };
+		E7E9CAB3F831619EA98022C3ACBB0E8F /* Floaty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9663AD56C0F7CD0A8C89C31DA76D8849 /* Floaty-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7F00C360A1E47BCFA7970B4BBEC51126 /* PBXContainerItemProxy */ = {
+		0780C4E7ECCB2BD4910247670C1BE643 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 72E614C823EA09AB1AAE80D5CD8A4C58;
 			remoteInfo = NMapsGeometry;
 		};
-		99C8969824A4B82C93C5B6163CBFBB39 /* PBXContainerItemProxy */ = {
+		0874D023D2050E231178DEA2DB955EB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2A775A88EA787684F2905BCB73F96D1;
+			remoteInfo = Floaty;
+		};
+		F80A1581E3455A1E175361D3C1C24829 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 72E614C823EA09AB1AAE80D5CD8A4C58;
+			remoteInfo = NMapsGeometry;
+		};
+		FCFB3B23A6454F9F46E5C76151497AE1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8E049F5F4E3BDC647F924FEF22D49D90;
 			remoteInfo = NMapsMap;
 		};
-		D21F54D3CD28A3CBAD182A95DA361459 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 72E614C823EA09AB1AAE80D5CD8A4C58;
-			remoteInfo = NMapsGeometry;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0970046F7060534BA9B286629593DA0C /* NMapsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.debug.xcconfig; sourceTree = "<group>"; };
+		02B0EB8BB3B2E5276AF51ED35136022E /* FloatyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyManager.swift; path = Sources/FloatyManager.swift; sourceTree = "<group>"; };
 		0CA07EF4525F8A7EDA22A6F881FF97BE /* Pods-MapMyMemories-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapMyMemories-Info.plist"; sourceTree = "<group>"; };
-		1A326C79B1B897CBCFDC36BFF5174A43 /* NMapsGeometry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.debug.xcconfig; sourceTree = "<group>"; };
 		1D0B665DFAE40E3F4B10E04F5E545B95 /* Pods-MapMyMemories-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MapMyMemories-umbrella.h"; sourceTree = "<group>"; };
-		485FAE6318CCD7779377C7AA4A7B3528 /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = NMapsGeometry.xcframework; path = framework/NMapsGeometry.xcframework; sourceTree = "<group>"; };
-		4F0C55D25B9900DE7936740E68EFDFCF /* NMapsMap.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = NMapsMap.xcframework; path = framework/NMapsMap.xcframework; sourceTree = "<group>"; };
-		53BB18D8DE6118DEC0AAC01027DBECA8 /* NMapsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.release.xcconfig; sourceTree = "<group>"; };
+		2915C263A5C5C8012A8C1E97512DC6A8 /* Floaty */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Floaty; path = Floaty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		394D1A88F2CD4C567C9EEBB7FA371FEA /* NMapsMap-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsMap-xcframeworks.sh"; sourceTree = "<group>"; };
+		3C9695C6858FE2F0E816B59F97182680 /* NMapsMap.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsMap.xcframework; path = framework/NMapsMap.xcframework; sourceTree = "<group>"; };
+		424744EB7107A21AA91CDF067CDA1600 /* NMapsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.release.xcconfig; sourceTree = "<group>"; };
+		48CEDAF729497B897F4D08B97A3A1FA9 /* Floaty-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Floaty-Info.plist"; sourceTree = "<group>"; };
 		5B483418E2818074DC28552BD4297F1F /* Pods-MapMyMemories */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MapMyMemories"; path = Pods_MapMyMemories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		647CB187775BEEBAFCBBE19024BF8217 /* Pods-MapMyMemories-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MapMyMemories-acknowledgements.markdown"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		696A3A9192DD08A48E1C272C7ECDEB04 /* FloatyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyViewController.swift; path = Sources/FloatyViewController.swift; sourceTree = "<group>"; };
+		77CE84C60C0E43662ABC1F8845FECA7E /* UIView+Draggable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Draggable.swift"; path = "Sources/UIView+Draggable.swift"; sourceTree = "<group>"; };
 		7D0F052959734ACCEDA19FDBC1262535 /* Pods-MapMyMemories.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MapMyMemories.modulemap"; sourceTree = "<group>"; };
-		7F89040B8DC7FC773592AA5FE110E9DF /* NMapsGeometry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.release.xcconfig; sourceTree = "<group>"; };
-		983FCEF2808419DF12F69DFEBD7685D4 /* NMapsMap-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsMap-xcframeworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8E7EEADA3C04E49F6AB0D8E6E2FEB228 /* Floaty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Floaty.swift; path = Sources/Floaty.swift; sourceTree = "<group>"; };
+		9663AD56C0F7CD0A8C89C31DA76D8849 /* Floaty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Floaty-dummy.m"; sourceTree = "<group>"; };
+		99392484FDD5A2B53FFE99AAA789E24E /* Floaty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Floaty.debug.xcconfig; sourceTree = "<group>"; };
+		9C605B6F6255539AE46AD5747F22F2C9 /* Floaty-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FED9A6F272F6F0C024BABD5BB88F66B /* Floaty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Floaty.release.xcconfig; sourceTree = "<group>"; };
 		A1B0F8C4FC389F80080874548D86AB57 /* Pods-MapMyMemories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MapMyMemories-dummy.m"; sourceTree = "<group>"; };
+		A29FB4E83E9C9FBA3703995A5AFD4C42 /* NMapsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.debug.xcconfig; sourceTree = "<group>"; };
 		A32B88CCF893D687AD76F062640E1764 /* Pods-MapMyMemories-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MapMyMemories-frameworks.sh"; sourceTree = "<group>"; };
 		A3E08D82574FC201B7352A3739EA914A /* Pods-MapMyMemories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapMyMemories.debug.xcconfig"; sourceTree = "<group>"; };
+		AFE36DEFE00FAEBB1D00EBBC9824D0FD /* FloatyItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyItem.swift; path = Sources/FloatyItem.swift; sourceTree = "<group>"; };
+		C239B5F0C736860B00E0E8784BCB1C21 /* NMapsGeometry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.release.xcconfig; sourceTree = "<group>"; };
 		C40F00A8C8D55973614C2E9F7EA1FBD9 /* Pods-MapMyMemories-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapMyMemories-acknowledgements.plist"; sourceTree = "<group>"; };
-		E101130795B024FC83E4F774AA209B18 /* NMapsGeometry-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsGeometry-xcframeworks.sh"; sourceTree = "<group>"; };
+		CD0C7E6138B19894F507D77CA847A477 /* Floaty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Floaty.modulemap; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D42250A4A2D9AF3302DD1F5E29E762BB /* FloatyWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyWindow.swift; path = Sources/FloatyWindow.swift; sourceTree = "<group>"; };
+		E1D12BBB417D20D83BFD95A6734208C2 /* NMapsGeometry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.debug.xcconfig; sourceTree = "<group>"; };
+		E36CFDF3049073D7431E2439F5ACFDD8 /* NMapsGeometry-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsGeometry-xcframeworks.sh"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EE4D9521BC626BCC466AE0F9F9754340 /* Pods-MapMyMemories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapMyMemories.release.xcconfig"; sourceTree = "<group>"; };
+		F6541EEC788D8AD5D90F0350EB3D97FC /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsGeometry.xcframework; path = framework/NMapsGeometry.xcframework; sourceTree = "<group>"; };
+		FA9905683BAD2BE86E97E4335C2CE2F6 /* Floaty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-prefix.pch"; sourceTree = "<group>"; };
+		FD9A9CEC3C2DD2A0F60279B69F5FF020 /* FloatyDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyDelegate.swift; path = Sources/FloatyDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		58EC2CAB9512991A97616D7855F6FE5E /* Frameworks */ = {
+		64608A899105E73EF1EEAF763727B591 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A469C5FB1F5C823FD547999EEFC0AD53 /* Foundation.framework in Frameworks */,
+				224183C41F3E7E35EE13E9CD3BB36938 /* Foundation.framework in Frameworks */,
+				72C98C8817A912FB7038531F576548C3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B47C569F11ADDE072E2C422C1E334ACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44C66CD860C074077671169981D8FD1C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		003C271C04EB3C0B6036709775BAC17B /* Products */ = {
+		07BE4B5CCA9D6973D1B214F398CE0AD6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5B483418E2818074DC28552BD4297F1F /* Pods-MapMyMemories */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		169A894F474781F666BE8D90408D3828 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E101130795B024FC83E4F774AA209B18 /* NMapsGeometry-xcframeworks.sh */,
-				1A326C79B1B897CBCFDC36BFF5174A43 /* NMapsGeometry.debug.xcconfig */,
-				7F89040B8DC7FC773592AA5FE110E9DF /* NMapsGeometry.release.xcconfig */,
+				E36CFDF3049073D7431E2439F5ACFDD8 /* NMapsGeometry-xcframeworks.sh */,
+				E1D12BBB417D20D83BFD95A6734208C2 /* NMapsGeometry.debug.xcconfig */,
+				C239B5F0C736860B00E0E8784BCB1C21 /* NMapsGeometry.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/NMapsGeometry";
 			sourceTree = "<group>";
 		};
-		25B56312D79088C322C5B52238334BCC /* Pods */ = {
+		103616DA723F64A3188373EFDAE0ECAE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2FE65985C01476131D3AC219F92CC3CF /* NMapsGeometry */,
-				487B37947971C0C75B135158191A5547 /* NMapsMap */,
+				394D1A88F2CD4C567C9EEBB7FA371FEA /* NMapsMap-xcframeworks.sh */,
+				A29FB4E83E9C9FBA3703995A5AFD4C42 /* NMapsMap.debug.xcconfig */,
+				424744EB7107A21AA91CDF067CDA1600 /* NMapsMap.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/NMapsMap";
 			sourceTree = "<group>";
 		};
-		2ED541A35C7BD1778556550CF4846D2F /* Frameworks */ = {
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F0C55D25B9900DE7936740E68EFDFCF /* NMapsMap.xcframework */,
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2FE65985C01476131D3AC219F92CC3CF /* NMapsGeometry */ = {
+		1B5674DBACD2B51E189E284B10D80ED8 /* NMapsGeometry */ = {
 			isa = PBXGroup;
 			children = (
-				DC955F600E602E5041F1000DC79753BB /* Frameworks */,
-				169A894F474781F666BE8D90408D3828 /* Support Files */,
+				A974C1DCF8F7742089C4F18D8C5913E2 /* Frameworks */,
+				07BE4B5CCA9D6973D1B214F398CE0AD6 /* Support Files */,
 			);
+			name = NMapsGeometry;
 			path = NMapsGeometry;
 			sourceTree = "<group>";
 		};
-		487B37947971C0C75B135158191A5547 /* NMapsMap */ = {
+		56C2A51E31820844395E41DCA7D872B0 /* Floaty */ = {
 			isa = PBXGroup;
 			children = (
-				2ED541A35C7BD1778556550CF4846D2F /* Frameworks */,
-				A3E28C362EAC5C5A2CCC22EE5E2FDA30 /* Support Files */,
+				8E7EEADA3C04E49F6AB0D8E6E2FEB228 /* Floaty.swift */,
+				FD9A9CEC3C2DD2A0F60279B69F5FF020 /* FloatyDelegate.swift */,
+				AFE36DEFE00FAEBB1D00EBBC9824D0FD /* FloatyItem.swift */,
+				02B0EB8BB3B2E5276AF51ED35136022E /* FloatyManager.swift */,
+				696A3A9192DD08A48E1C272C7ECDEB04 /* FloatyViewController.swift */,
+				D42250A4A2D9AF3302DD1F5E29E762BB /* FloatyWindow.swift */,
+				77CE84C60C0E43662ABC1F8845FECA7E /* UIView+Draggable.swift */,
+				C497AA380C10EDD5B5FFB0D10D0C1F5D /* Support Files */,
 			);
-			path = NMapsMap;
+			name = Floaty;
+			path = Floaty;
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -167,40 +211,73 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A3E28C362EAC5C5A2CCC22EE5E2FDA30 /* Support Files */ = {
+		A974C1DCF8F7742089C4F18D8C5913E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				983FCEF2808419DF12F69DFEBD7685D4 /* NMapsMap-xcframeworks.sh */,
-				0970046F7060534BA9B286629593DA0C /* NMapsMap.debug.xcconfig */,
-				53BB18D8DE6118DEC0AAC01027DBECA8 /* NMapsMap.release.xcconfig */,
+				F6541EEC788D8AD5D90F0350EB3D97FC /* NMapsGeometry.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0F7428CBB76220B455D517DF45CD1C5 /* NMapsMap */ = {
+			isa = PBXGroup;
+			children = (
+				EE0400963F397A16BA0BC91B5D4D6114 /* Frameworks */,
+				103616DA723F64A3188373EFDAE0ECAE /* Support Files */,
+			);
+			name = NMapsMap;
+			path = NMapsMap;
+			sourceTree = "<group>";
+		};
+		C30963C1F54342141F987450C589F91F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56C2A51E31820844395E41DCA7D872B0 /* Floaty */,
+				1B5674DBACD2B51E189E284B10D80ED8 /* NMapsGeometry */,
+				B0F7428CBB76220B455D517DF45CD1C5 /* NMapsMap */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C497AA380C10EDD5B5FFB0D10D0C1F5D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD0C7E6138B19894F507D77CA847A477 /* Floaty.modulemap */,
+				9663AD56C0F7CD0A8C89C31DA76D8849 /* Floaty-dummy.m */,
+				48CEDAF729497B897F4D08B97A3A1FA9 /* Floaty-Info.plist */,
+				FA9905683BAD2BE86E97E4335C2CE2F6 /* Floaty-prefix.pch */,
+				9C605B6F6255539AE46AD5747F22F2C9 /* Floaty-umbrella.h */,
+				99392484FDD5A2B53FFE99AAA789E24E /* Floaty.debug.xcconfig */,
+				9FED9A6F272F6F0C024BABD5BB88F66B /* Floaty.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/NMapsMap";
+			path = "../Target Support Files/Floaty";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				25B56312D79088C322C5B52238334BCC /* Pods */,
-				003C271C04EB3C0B6036709775BAC17B /* Products */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				C30963C1F54342141F987450C589F91F /* Pods */,
+				D3A28391FC1893ADEE4E918FFCC928F1 /* Products */,
 				62441AB60555D18A63830C7B4B8ED811 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D3A28391FC1893ADEE4E918FFCC928F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				2915C263A5C5C8012A8C1E97512DC6A8 /* Floaty */,
+				5B483418E2818074DC28552BD4297F1F /* Pods-MapMyMemories */,
 			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		DC955F600E602E5041F1000DC79753BB /* Frameworks */ = {
+		EE0400963F397A16BA0BC91B5D4D6114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				485FAE6318CCD7779377C7AA4A7B3528 /* NMapsGeometry.xcframework */,
+				3C9695C6858FE2F0E816B59F97182680 /* NMapsMap.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -225,31 +302,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C6ABAFC0FEAC376BFC859D7EC47C2E19 /* Headers */ = {
+		E043972B8466D13A31A8D0FFB02E9A72 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				535CAD46E02537E8A72D181731A43FF6 /* Pods-MapMyMemories-umbrella.h in Headers */,
+				197533DE6434BAC49762D75A4E774AB6 /* Floaty-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF2DB74178488726259F87D253D6D511 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE2667975318F94678EA2EF0C5022D20 /* Pods-MapMyMemories-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F161B6FBD70C33589049411BD44489C3 /* Pods-MapMyMemories */ = {
+		D2A775A88EA787684F2905BCB73F96D1 /* Floaty */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2E59151DEF734C003438B360D012A40 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */;
+			buildConfigurationList = 5F170E0F31DA7943C8AFED9AD6E932E5 /* Build configuration list for PBXNativeTarget "Floaty" */;
 			buildPhases = (
-				C6ABAFC0FEAC376BFC859D7EC47C2E19 /* Headers */,
-				D43F0E854B75C52B3425B74AA3615BE2 /* Sources */,
-				58EC2CAB9512991A97616D7855F6FE5E /* Frameworks */,
-				28B72A41E8C3AAD1B3057E776655663F /* Resources */,
+				E043972B8466D13A31A8D0FFB02E9A72 /* Headers */,
+				6EC1D33B87FB949672AED2B4515DB69D /* Sources */,
+				64608A899105E73EF1EEAF763727B591 /* Frameworks */,
+				C89E02018274D15C5FAD41C2E442555D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5748E580BADC437BDFA542E06FE1BDB4 /* PBXTargetDependency */,
-				4B7008705DB755FE3621A7069ECD86BB /* PBXTargetDependency */,
+			);
+			name = Floaty;
+			productName = Floaty;
+			productReference = 2915C263A5C5C8012A8C1E97512DC6A8 /* Floaty */;
+			productType = "com.apple.product-type.framework";
+		};
+		F161B6FBD70C33589049411BD44489C3 /* Pods-MapMyMemories */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B03DB58EF8419BA20454A2A808EF45C7 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */;
+			buildPhases = (
+				EF2DB74178488726259F87D253D6D511 /* Headers */,
+				7D0B4D5848A53EBB4C8F58D8AE040A67 /* Sources */,
+				B47C569F11ADDE072E2C422C1E334ACE /* Frameworks */,
+				277489052C64F97BB60E6B6C48386569 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CD82843938F67CDCD5C929936643449 /* PBXTargetDependency */,
+				3A7419986EF19C2A2E976B58A2A8DEFF /* PBXTargetDependency */,
+				49728D0EAA17546C36E2F42B7212FE93 /* PBXTargetDependency */,
 			);
 			name = "Pods-MapMyMemories";
 			productName = Pods_MapMyMemories;
@@ -274,10 +378,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 003C271C04EB3C0B6036709775BAC17B /* Products */;
+			productRefGroup = D3A28391FC1893ADEE4E918FFCC928F1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				D2A775A88EA787684F2905BCB73F96D1 /* Floaty */,
 				72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */,
 				8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */,
 				F161B6FBD70C33589049411BD44489C3 /* Pods-MapMyMemories */,
@@ -286,7 +391,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		28B72A41E8C3AAD1B3057E776655663F /* Resources */ = {
+		277489052C64F97BB60E6B6C48386569 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C89E02018274D15C5FAD41C2E442555D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,41 +445,62 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D43F0E854B75C52B3425B74AA3615BE2 /* Sources */ = {
+		6EC1D33B87FB949672AED2B4515DB69D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B99E3D2030C34B8615FF9A6213E45C /* Pods-MapMyMemories-dummy.m in Sources */,
+				D3214C9C78BB1008BBE89C1F11A42B77 /* Floaty.swift in Sources */,
+				E7E9CAB3F831619EA98022C3ACBB0E8F /* Floaty-dummy.m in Sources */,
+				8091A6D5D32B94B079733D9D09EAE747 /* FloatyDelegate.swift in Sources */,
+				013A0B965FB7F20BD0F87E8871221253 /* FloatyItem.swift in Sources */,
+				CA7F3C2E65B19F2F4BCBFF5567024BAF /* FloatyManager.swift in Sources */,
+				36EDF538E419A9721571437C7F1CA6DD /* FloatyViewController.swift in Sources */,
+				D9FB3A64C227528D834DF04B1D14583C /* FloatyWindow.swift in Sources */,
+				E660E9ACA165C6A86576E1DFE587AA53 /* UIView+Draggable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D0B4D5848A53EBB4C8F58D8AE040A67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF48002B4CCD5968D20995F40D1F9E8 /* Pods-MapMyMemories-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		258F097AFE79EE06421A954BF7063DC2 /* PBXTargetDependency */ = {
+		31B1BA3DF935DA8BFE992E6E65E6C14D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NMapsGeometry;
 			target = 72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */;
-			targetProxy = 7F00C360A1E47BCFA7970B4BBEC51126 /* PBXContainerItemProxy */;
+			targetProxy = F80A1581E3455A1E175361D3C1C24829 /* PBXContainerItemProxy */;
 		};
-		4B7008705DB755FE3621A7069ECD86BB /* PBXTargetDependency */ = {
+		3A7419986EF19C2A2E976B58A2A8DEFF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NMapsGeometry;
+			target = 72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */;
+			targetProxy = 0780C4E7ECCB2BD4910247670C1BE643 /* PBXContainerItemProxy */;
+		};
+		49728D0EAA17546C36E2F42B7212FE93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NMapsMap;
 			target = 8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */;
-			targetProxy = 99C8969824A4B82C93C5B6163CBFBB39 /* PBXContainerItemProxy */;
+			targetProxy = FCFB3B23A6454F9F46E5C76151497AE1 /* PBXContainerItemProxy */;
 		};
-		5748E580BADC437BDFA542E06FE1BDB4 /* PBXTargetDependency */ = {
+		6CD82843938F67CDCD5C929936643449 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = NMapsGeometry;
-			target = 72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */;
-			targetProxy = D21F54D3CD28A3CBAD182A95DA361459 /* PBXContainerItemProxy */;
+			name = Floaty;
+			target = D2A775A88EA787684F2905BCB73F96D1 /* Floaty */;
+			targetProxy = 0874D023D2050E231178DEA2DB955EB8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		138EE7F5840AEF4E4028CA5FAAE9EE6E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F89040B8DC7FC773592AA5FE110E9DF /* NMapsGeometry.release.xcconfig */;
+			baseConfigurationReference = C239B5F0C736860B00E0E8784BCB1C21 /* NMapsGeometry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -379,44 +512,6 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		244E9324858CC30BF309A9FCB2D00AC6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE4D9521BC626BCC466AE0F9F9754340 /* Pods-MapMyMemories.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -484,7 +579,7 @@
 		};
 		4122D12474652D4B94029A59C0DC6010 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A326C79B1B897CBCFDC36BFF5174A43 /* NMapsGeometry.debug.xcconfig */;
+			baseConfigurationReference = E1D12BBB417D20D83BFD95A6734208C2 /* NMapsGeometry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -498,7 +593,45 @@
 			};
 			name = Debug;
 		};
-		D3381B35681D797B0A9F08DD9AE41F5E /* Debug */ = {
+		4AC984B80069C988B3C42D97C553FDF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE4D9521BC626BCC466AE0F9F9754340 /* Pods-MapMyMemories.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87E46C7245923B12A1B9922DB537E6FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3E08D82574FC201B7352A3739EA914A /* Pods-MapMyMemories.debug.xcconfig */;
 			buildSettings = {
@@ -535,9 +668,44 @@
 			};
 			name = Debug;
 		};
+		E49416477E9FC5E1FB426F6C36F20871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99392484FDD5A2B53FFE99AAA789E24E /* Floaty.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Floaty/Floaty-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Floaty/Floaty-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Floaty/Floaty.modulemap";
+				PRODUCT_MODULE_NAME = Floaty;
+				PRODUCT_NAME = Floaty;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E683018BA3CA2E27A39E5DF5619B90F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0970046F7060534BA9B286629593DA0C /* NMapsMap.debug.xcconfig */;
+			baseConfigurationReference = A29FB4E83E9C9FBA3703995A5AFD4C42 /* NMapsMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -550,6 +718,42 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		F0BFC825DFA7880BB6E0C8E3F67338F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FED9A6F272F6F0C024BABD5BB88F66B /* Floaty.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Floaty/Floaty-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Floaty/Floaty-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Floaty/Floaty.modulemap";
+				PRODUCT_MODULE_NAME = Floaty;
+				PRODUCT_NAME = Floaty;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		F4FF6A0D1970CA9705974E3CB2134802 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -619,7 +823,7 @@
 		};
 		FE5D137BA104CCBECE001BF38C0AEB3E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53BB18D8DE6118DEC0AAC01027DBECA8 /* NMapsMap.release.xcconfig */;
+			baseConfigurationReference = 424744EB7107A21AA91CDF067CDA1600 /* NMapsMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -646,6 +850,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		5F170E0F31DA7943C8AFED9AD6E932E5 /* Build configuration list for PBXNativeTarget "Floaty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E49416477E9FC5E1FB426F6C36F20871 /* Debug */,
+				F0BFC825DFA7880BB6E0C8E3F67338F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		73E737D5F21341C24A13EBC70CD8D471 /* Build configuration list for PBXAggregateTarget "NMapsMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -655,11 +868,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2E59151DEF734C003438B360D012A40 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */ = {
+		B03DB58EF8419BA20454A2A808EF45C7 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3381B35681D797B0A9F08DD9AE41F5E /* Debug */,
-				244E9324858CC30BF309A9FCB2D00AC6 /* Release */,
+				87E46C7245923B12A1B9922DB537E6FE /* Debug */,
+				4AC984B80069C988B3C42D97C553FDF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

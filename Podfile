@@ -7,7 +7,7 @@ target 'MapMyMemories' do
   
 
   pod 'NMapsMap'
-
+  pod 'Floaty', '~> 4.2.0'
   # Pods for MapMyMemories
 
 end
