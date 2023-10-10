@@ -19,11 +19,7 @@ class AppViewController: UITabBarController{
         homeVC.tabBarItem.title = "홈"
         homeVC.tabBarItem.image = UIImage(systemName: "house.fill")
         
-        let writeVC = UINavigationController(rootViewController: WriteViewController())
-        writeVC.tabBarItem.title = "기록"
-        writeVC.tabBarItem.image = UIImage(systemName: "pencil.line")
-        
-        setViewControllers([writeVC], animated: true)
+        setViewControllers([homeVC], animated: true)
     }
     
 }
