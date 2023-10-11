@@ -26,7 +26,9 @@ final class RealmManager{
     ///해당 제네릭 형태의 테이블에 레코드를 삽입한다.
     func writeRecord<T: Object>(data: T) {
         do { try realm.write { realm.add(data)}
-        } catch { print(error) }
+        } catch { 
+            
+            print(error) }
     }
     
     func deleteRecord<T: Object>(data: T){
