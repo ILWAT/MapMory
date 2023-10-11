@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Floaty
 
 final class HomeViewController: BaseViewController{
     //MARK: - Properties
     let mainView = HomeView()
+    
+    
     
     //MARK: - LifeCycle
     override func loadView() {
@@ -20,6 +23,9 @@ final class HomeViewController: BaseViewController{
     
     //MARK: - Configure
     override func configure() {
+        mainView.floatingButton.addItem("기록하기", icon: UIImage(systemName: "pencil.line")) { item in
+            self.navigationController?.pushViewController(WriteViewController(), animated: true)
+        }
     }
     
     

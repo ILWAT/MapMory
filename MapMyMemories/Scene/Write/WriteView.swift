@@ -133,17 +133,10 @@ final class WriteView: BaseView, UIScrollViewDelegate{
             return outgoing
         })
         let date = Date()
-        config.title = dateFormat.string(from: date)
         config.baseBackgroundColor = .mainTintColor
         config.cornerStyle = .capsule
         button.configuration = config
         return button
-    }()
-    
-    let dateFormat = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY. MM. dd."
-        return formatter
     }()
     
     let titleTextField = {

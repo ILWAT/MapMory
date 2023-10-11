@@ -31,6 +31,15 @@
 		DE8939912AC860C00099D1AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939902AC860C00099D1AA /* HomeView.swift */; };
 		DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939922AC8617A0099D1AA /* AppViewController.swift */; };
 		DE8939952AC8989F0099D1AA /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939942AC8989F0099D1AA /* Extension+UIView.swift */; };
+		DE90B51D2AD3260800B6A694 /* SearchLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B51C2AD3260800B6A694 /* SearchLocationViewController.swift */; };
+		DE90B5212AD3421800B6A694 /* SearchLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B5202AD3421800B6A694 /* SearchLocationModel.swift */; };
+		DE90B5232AD3438700B6A694 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B5222AD3438700B6A694 /* APIManager.swift */; };
+		DE90B5252AD346EE00B6A694 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B5242AD346EE00B6A694 /* Router.swift */; };
+		DE90B5282AD531D300B6A694 /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B5272AD531D300B6A694 /* SelectDateViewController.swift */; };
+		DE90B52A2AD5321300B6A694 /* SelectDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B5292AD5321300B6A694 /* SelectDateView.swift */; };
+		DE90B52F2AD5604400B6A694 /* ToastMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B52E2AD5604400B6A694 /* ToastMessageType.swift */; };
+		DE90B56D2AD679D500B6A694 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B56C2AD679D400B6A694 /* Observable.swift */; };
+		DE90B5702AD67B6600B6A694 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */; };
 		DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216C2AC959DE00B00A26 /* WriteView.swift */; };
 		DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216E2AC959E900B00A26 /* WriteViewController.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +68,15 @@
 		DE8939902AC860C00099D1AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DE8939922AC8617A0099D1AA /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		DE8939942AC8989F0099D1AA /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		DE90B51C2AD3260800B6A694 /* SearchLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationViewController.swift; sourceTree = "<group>"; };
+		DE90B5202AD3421800B6A694 /* SearchLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchLocationModel.swift; sourceTree = "<group>"; };
+		DE90B5222AD3438700B6A694 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DE90B5242AD346EE00B6A694 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		DE90B5272AD531D300B6A694 /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
+		DE90B5292AD5321300B6A694 /* SelectDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateView.swift; sourceTree = "<group>"; };
+		DE90B52E2AD5604400B6A694 /* ToastMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessageType.swift; sourceTree = "<group>"; };
+		DE90B56C2AD679D400B6A694 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
 		DEBB216C2AC959DE00B00A26 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		DEBB216E2AC959E900B00A26 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +170,7 @@
 		DE8939582AC197640099D1AA /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				DE90B56E2AD67B3B00B6A694 /* ViewModel */,
 				DEBB216B2AC959BE00B00A26 /* Write */,
 				DE8939702AC324850099D1AA /* Home */,
 				DE8939692AC1B1830099D1AA /* Base */,
@@ -163,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				DE8939862AC499A00099D1AA /* MemoryDB.swift */,
+				DE90B5202AD3421800B6A694 /* SearchLocationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +211,8 @@
 			children = (
 				DE8939662AC19E6A0099D1AA /* APIKeys.swift */,
 				DE8939882AC4A4DA0099D1AA /* RealmManager.swift */,
+				DE90B5222AD3438700B6A694 /* APIManager.swift */,
+				DE90B5242AD346EE00B6A694 /* Router.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -217,13 +239,42 @@
 		DE89398A2AC4A6AA0099D1AA /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				DE90B52E2AD5604400B6A694 /* ToastMessageType.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		DE90B51B2AD3238900B6A694 /* SelectLocation */ = {
+			isa = PBXGroup;
+			children = (
+				DE90B51C2AD3260800B6A694 /* SearchLocationViewController.swift */,
+			);
+			path = SelectLocation;
+			sourceTree = "<group>";
+		};
+		DE90B5262AD531B000B6A694 /* SelectDate */ = {
+			isa = PBXGroup;
+			children = (
+				DE90B5272AD531D300B6A694 /* SelectDateViewController.swift */,
+				DE90B5292AD5321300B6A694 /* SelectDateView.swift */,
+			);
+			path = SelectDate;
+			sourceTree = "<group>";
+		};
+		DE90B56E2AD67B3B00B6A694 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DE90B56C2AD679D400B6A694 /* Observable.swift */,
+				DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DEBB216B2AC959BE00B00A26 /* Write */ = {
 			isa = PBXGroup;
 			children = (
+				DE90B5262AD531B000B6A694 /* SelectDate */,
+				DE90B51B2AD3238900B6A694 /* SelectLocation */,
 				DE43BD3A2ACE864F00FD81DD /* Cell */,
 				DEBB216C2AC959DE00B00A26 /* WriteView.swift */,
 				DEBB216E2AC959E900B00A26 /* WriteViewController.swift */,
@@ -363,17 +414,26 @@
 				DE8939892AC4A4DB0099D1AA /* RealmManager.swift in Sources */,
 				DE43BD3C2ACE866200FD81DD /* ImageCollectionViewCell.swift in Sources */,
 				DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */,
+				DE90B5702AD67B6600B6A694 /* WriteViewModel.swift in Sources */,
+				DE90B52A2AD5321300B6A694 /* SelectDateView.swift in Sources */,
 				DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */,
 				DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */,
+				DE90B5212AD3421800B6A694 /* SearchLocationModel.swift in Sources */,
 				DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */,
 				DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */,
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
+				DE90B56D2AD679D500B6A694 /* Observable.swift in Sources */,
+				DE90B52F2AD5604400B6A694 /* ToastMessageType.swift in Sources */,
+				DE90B5252AD346EE00B6A694 /* Router.swift in Sources */,
 				DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */,
 				DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */,
+				DE90B5232AD3438700B6A694 /* APIManager.swift in Sources */,
+				DE90B5282AD531D300B6A694 /* SelectDateViewController.swift in Sources */,
 				DE8939742AC326540099D1AA /* BaseView.swift in Sources */,
 				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
 				DE8939912AC860C00099D1AA /* HomeView.swift in Sources */,
 				DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */,
+				DE90B51D2AD3260800B6A694 /* SearchLocationViewController.swift in Sources */,
 				DE89396B2AC1B1F80099D1AA /* BaseViewController.swift in Sources */,
 				DE8939952AC8989F0099D1AA /* Extension+UIView.swift in Sources */,
 			);
