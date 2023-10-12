@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4675B0914184588098E10F50 /* Pods_MapMyMemories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */; };
+		DE20B8902AD85DE4006FD060 /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = DE20B88F2AD85DE4006FD060 /* EmojiPicker */; };
+		DE20B8922AD861EF006FD060 /* EmotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20B8912AD861EF006FD060 /* EmotionCollectionViewCell.swift */; };
 		DE43BD3C2ACE866200FD81DD /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */; };
 		DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */; };
 		DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393B2AC1954D0099D1AA /* AppDelegate.swift */; };
@@ -48,6 +50,7 @@
 		3C17EBF444A77AA63B0490BA /* Pods-MapMyMemories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyMemories.release.xcconfig"; path = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.release.xcconfig"; sourceTree = "<group>"; };
 		45AA7D376B33E8B0471AABFE /* Pods-MapMyMemories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyMemories.debug.xcconfig"; path = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.debug.xcconfig"; sourceTree = "<group>"; };
 		B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapMyMemories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE20B8912AD861EF006FD060 /* EmotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		DE8939382AC1954D0099D1AA /* MapMyMemories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyMemories.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE8939562AC1974A0099D1AA /* RealmSwift in Frameworks */,
+				DE20B8902AD85DE4006FD060 /* EmojiPicker in Frameworks */,
 				DE89395E2AC19A160099D1AA /* Alamofire in Frameworks */,
 				DE8939542AC1974A0099D1AA /* Realm in Frameworks */,
 				DE8939612AC19A3B0099D1AA /* Toast in Frameworks */,
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */,
+				DE20B8912AD861EF006FD060 /* EmotionCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 				DE8939552AC1974A0099D1AA /* RealmSwift */,
 				DE89395D2AC19A160099D1AA /* Alamofire */,
 				DE8939602AC19A3B0099D1AA /* Toast */,
+				DE20B88F2AD85DE4006FD060 /* EmojiPicker */,
 			);
 			productName = MapMyMemories;
 			productReference = DE8939382AC1954D0099D1AA /* MapMyMemories.app */;
@@ -340,6 +346,7 @@
 				DE8939522AC1974A0099D1AA /* XCRemoteSwiftPackageReference "realm-swift" */,
 				DE89395C2AC19A160099D1AA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DE89395F2AC19A3B0099D1AA /* XCRemoteSwiftPackageReference "Toast-Swift" */,
+				DE20B88E2AD85DE4006FD060 /* XCRemoteSwiftPackageReference "EmojiPicker" */,
 			);
 			productRefGroup = DE8939392AC1954D0099D1AA /* Products */;
 			projectDirPath = "";
@@ -428,6 +435,7 @@
 				DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */,
 				DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */,
 				DE90B5232AD3438700B6A694 /* APIManager.swift in Sources */,
+				DE20B8922AD861EF006FD060 /* EmotionCollectionViewCell.swift in Sources */,
 				DE90B5282AD531D300B6A694 /* SelectDateViewController.swift in Sources */,
 				DE8939742AC326540099D1AA /* BaseView.swift in Sources */,
 				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
@@ -668,6 +676,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DE20B88E2AD85DE4006FD060 /* XCRemoteSwiftPackageReference "EmojiPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/htmlprogrammist/EmojiPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.9;
+			};
+		};
 		DE89394F2AC196DD0099D1AA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -703,6 +719,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DE20B88F2AD85DE4006FD060 /* EmojiPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE20B88E2AD85DE4006FD060 /* XCRemoteSwiftPackageReference "EmojiPicker" */;
+			productName = EmojiPicker;
+		};
 		DE8939502AC196DD0099D1AA /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DE89394F2AC196DD0099D1AA /* XCRemoteSwiftPackageReference "SnapKit" */;
