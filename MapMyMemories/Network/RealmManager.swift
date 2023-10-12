@@ -16,6 +16,8 @@ final class RealmManager{
     private init() {
         do {self.realm = try Realm()}
         catch { print(error) }
+        
+        print(realm.configuration.fileURL)
     }
     
     ///해당 제네릭 형태의 테이블의 모든 레코드들을 조회한다.

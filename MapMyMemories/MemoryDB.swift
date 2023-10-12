@@ -54,10 +54,22 @@ class TagDB: Object{
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var tag: String = ""
     @Persisted var tagDate: Date = Date()
+    
+    convenience init(tag: String, tagDate: Date) {
+        self.init()
+        self.tag = tag
+        self.tagDate = tagDate
+    }
 }
 
 class EmotionDB: Object{
     @Persisted(primaryKey: true) var _id: ObjectId
     @Persisted var emotion: String = ""
     @Persisted var emotionDate: Date = Date()
+    
+    convenience init(emotion: String, emotionDate: Date) {
+        self.init()
+        self.emotion = emotion
+        self.emotionDate = emotionDate
+    }
 }
