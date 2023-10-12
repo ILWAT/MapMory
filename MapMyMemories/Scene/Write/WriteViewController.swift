@@ -7,6 +7,7 @@
 
 import UIKit
 import PhotosUI
+import EmojiPicker
 
 final class WriteViewController: BaseViewController{
     
@@ -22,6 +23,12 @@ final class WriteViewController: BaseViewController{
         }
     }
     
+    var emotion: [String] = []{
+        didSet{
+            mainView.emotionCollectionView.reloadData()
+        }
+    }
+    
     //MARK: - LifeCycle
     override func loadView() {
         view = mainView
@@ -31,6 +38,9 @@ final class WriteViewController: BaseViewController{
     override func configure() {
         mainView.imageCollectionView.delegate = self
         mainView.imageCollectionView.dataSource = self
+        mainView.emotionCollectionView.delegate = self
+        mainView.emotionCollectionView.dataSource = self
+        
         mainView.locationSearchButton.addTarget(self, action: #selector(tappedSearchLocationBtn), for: .touchUpInside)
         mainView.dateButton.addTarget(self, action: #selector(tappedDateBtn), for: .touchUpInside)
         setBind()
@@ -93,10 +103,16 @@ final class WriteViewController: BaseViewController{
         self.present(picker, animated: true)
     }
     
-    //MARK: - Helper
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
+    @objc func tappedAddEmotionBtn(_ sender: UIButton){
+        let viewController = EmojiPickerViewController()
+        viewController.delegate = self
+        viewController.sourceView = sender
+        viewController.arrowDirection = .down
+        viewController.isDismissedAfterChoosing = true
+        present(viewController, animated: true)
     }
+    
+    //MARK: - Helper
     
     func setInputData(){
         guard let memoryTitle = mainView.titleTextField.text, memoryTitle != "" else {
@@ -113,6 +129,11 @@ final class WriteViewController: BaseViewController{
         
         inputData.title = memoryTitle
         inputData.memo = memoryMemo
+        inputData.memoryDate = viewModel.date.value
+        for element in emotion{
+            inputData.emotion.append(EmotionDB(emotion: element, emotionDate: Date()))
+        }
+        
         RealmManager.shared.writeRecord(data: inputData)
         
         self.navigationController?.popViewController(animated: true)
@@ -146,7 +167,75 @@ extension WriteViewController: PHPickerViewControllerDelegate{
 }
 
 
-extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSource, PassLocation{
+extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSource, PassLocation, EmojiPickerDelegate{
+    //MARK: - CollectionViewDelegate & DataSource
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView.tag{
+        case collectionViewType.image.rawValue:
+            return images.count + 1
+            
+        case collectionViewType.emotion.rawValue:
+            return emotion.count + 1
+            
+        default:
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView.tag{
+        case collectionViewType.image.rawValue:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.addImageButton.addTarget(self, action: #selector(tappedAddImageBtn), for: .touchUpInside)
+            
+            if indexPath.item == 0{
+                cell.addImageButton.isHidden = false
+                cell.imageView.image = nil
+            } else {
+                cell.imageView.image = images[indexPath.item-1]
+                cell.addImageButton.isHidden = true
+            }
+            
+            return cell
+            
+        case collectionViewType.emotion.rawValue:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmotionCollectionViewCell.identifier, for: indexPath) as? EmotionCollectionViewCell else { return UICollectionViewCell() }
+            
+            cell.addEmotionButton.addTarget(self, action: #selector(tappedAddEmotionBtn), for: .touchUpInside)
+            
+            if indexPath.item == 0{
+                cell.addEmotionButton.isHidden = false
+                cell.emotionLabel.text = nil
+                cell.deleteButton.isHidden = true
+            } else {
+                cell.emotionLabel.text = emotion[indexPath.item-1]
+                cell.addEmotionButton.isHidden = true
+                cell.deleteButton.isHidden = false
+            }
+            
+            return cell
+            
+        default:
+            return UICollectionViewCell()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView.tag{
+        case collectionViewType.image.rawValue:
+            break
+            
+        case collectionViewType.emotion.rawValue:
+            break
+            
+        default:
+            break
+        }
+    }
+    
+    //MARK: - SearchControllerDelegate
     func passingLocation(addressData: Document) {
         
         guard let lat = Double(addressData.x), let long = Double(addressData.y) else {
@@ -161,64 +250,9 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
         self.mainView.locationTextField.text = self.inputData.address?.placeName
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch collectionView.tag{
-        case collectionViewType.image.getViewType:
-            return images.count + 1
-            
-        case collectionViewType.emotion.getViewType:
-            return 0
-            
-        default:
-            return 0
-        }
+    //MARK: - EmojiPickerDelegate
+    func didGetEmoji(emoji: String) {
+        self.emotion.append(emoji)
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch collectionView.tag{
-        case collectionViewType.image.getViewType:
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
-            
-            cell.addImageButton.addTarget(self, action: #selector(tappedAddImageBtn), for: .touchUpInside)
-            
-            if indexPath.item == 0{
-                cell.addImageButton.isHidden = false
-                cell.imageView.image = nil
-            } else {
-                cell.imageView.image = images[indexPath.item-1]
-                cell.addImageButton.isHidden = true
-            }
-            
-            return cell
-        case collectionViewType.emotion.getViewType:
-           return UICollectionViewCell()
-            
-        default:
-            return UICollectionViewCell()
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch collectionView.tag{
-        case collectionViewType.image.getViewType:
-            if indexPath.item == 0{
-                var configuration = PHPickerConfiguration()
-                configuration.selectionLimit = 3
-                configuration.filter = .images
-                
-                let picker = PHPickerViewController(configuration: configuration)
-                picker.delegate = self
-                
-                self.present(picker, animated: true)
-            }
-            
-        case collectionViewType.emotion.getViewType:
-            break
-            
-        default:
-            break
-        }
-    }
-    
     
 }

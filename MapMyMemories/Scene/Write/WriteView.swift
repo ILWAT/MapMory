@@ -10,18 +10,9 @@ import UIKit
 enum collectionViewType: Int{
     case image = 0
     case emotion
-    
-    var getViewType: Int{
-        switch self {
-        case .image:
-            return self.rawValue
-        case .emotion:
-            return self.rawValue
-        }
-    }
 }
 
-final class WriteView: BaseView, UIScrollViewDelegate{
+final class WriteView: BaseView{
     //MARK: - Properties
     
     let scrollView = {
@@ -29,14 +20,12 @@ final class WriteView: BaseView, UIScrollViewDelegate{
         view.backgroundColor = .mainBackgroundColor
         view.showsHorizontalScrollIndicator = false
         view.showsVerticalScrollIndicator = true
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     let contentView = {
         let view = UIView()
         view.backgroundColor = .mainBackgroundColor
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
@@ -101,7 +90,7 @@ final class WriteView: BaseView, UIScrollViewDelegate{
     lazy var imageCollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.setCollectionViewLayout())
         view.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
-        view.tag = collectionViewType.image.getViewType
+        view.tag = collectionViewType.image.rawValue
         return view
     }()
     
@@ -152,13 +141,19 @@ final class WriteView: BaseView, UIScrollViewDelegate{
         return view
     }()
     
+    lazy var emotionCollectionView = {
+        let view = UICollectionView(frame: .zero, collectionViewLayout: setCollectionViewLayout())
+        view.tag = collectionViewType.emotion.rawValue
+        view.register(EmotionCollectionViewCell.self, forCellWithReuseIdentifier: EmotionCollectionViewCell.identifier)
+        return view
+    }()
+    
     //MARK: - Configure
     override func configure() {
         addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubViews([imageLabel, locationLabel, dateLabel, titleLabel, emotionLabel, memoLabel, tagLabel])
-        contentView.addSubViews([imageCollectionView, locationTextField, locationSearchButton, dateButton, titleTextField, memoTextField])
-//        scrollView.delegate = self
+        contentView.addSubViews([imageCollectionView, locationTextField, locationSearchButton, dateButton, titleTextField, memoTextField, emotionCollectionView])
     }
     
     //MARK: - SetConstraints
@@ -177,20 +172,10 @@ final class WriteView: BaseView, UIScrollViewDelegate{
             make.top.leading.equalTo(contentView.safeAreaLayoutGuide).inset(leadingDefaultSpace)
             make.trailing.lessThanOrEqualToSuperview().inset(leadingDefaultSpace)
         }
-//        imageView.snp.makeConstraints { make in
-//            make.leading.equalTo(imageLabel.snp.leading)
-//            make.top.equalTo(imageLabel.snp.bottom).offset(topDefaultSpace)
-//            make.size.equalTo(self.snp.width).multipliedBy(0.3)
-//        }
-//        addImageButton.snp.makeConstraints { make in
-//            make.leading.equalTo(imageView.snp.trailing).offset(leadingDefaultSpace)
-//            make.top.bottom.equalTo(imageView)
-//            make.width.equalTo(addImageButton.snp.height)
-//        }
         imageCollectionView.snp.makeConstraints { make in
             make.top.equalTo(imageLabel.snp.bottom).offset(topDefaultSpace)
             make.horizontalEdges.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.2)
+            make.height.equalTo(safeAreaLayoutGuide).multipliedBy(0.2)
         }
         locationLabel.snp.makeConstraints { make in
             make.top.equalTo(imageCollectionView.snp.bottom).offset(topDefaultSpace)
@@ -199,7 +184,7 @@ final class WriteView: BaseView, UIScrollViewDelegate{
         }
         locationTextField.snp.makeConstraints { make in
             make.top.equalTo(locationLabel.snp.bottom).offset(topDefaultSpace)
-            make.leading.trailing.equalToSuperview().inset(leadingDefaultSpace)
+            make.leading.equalToSuperview().inset(leadingDefaultSpace)
             make.height.equalTo(50)
         }
         locationSearchButton.snp.makeConstraints { make in
@@ -214,8 +199,9 @@ final class WriteView: BaseView, UIScrollViewDelegate{
             make.trailing.lessThanOrEqualToSuperview().inset(leadingDefaultSpace)
         }
         dateButton.snp.makeConstraints { make in
-            make.leading.equalTo(dateLabel)
-            make.top.equalTo(dateLabel.snp.bottom).offset(topDefaultSpace)
+            make.leading.greaterThanOrEqualTo(dateLabel.snp.trailing).offset(leadingDefaultSpace)
+            make.trailing.equalTo(safeAreaLayoutGuide).inset(leadingDefaultSpace)
+            make.centerY.equalTo(dateLabel)
         }
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(dateButton.snp.bottom).offset(topDefaultSpace)
@@ -242,9 +228,13 @@ final class WriteView: BaseView, UIScrollViewDelegate{
             make.top.equalTo(memoTextField.snp.bottom).offset(topDefaultSpace)
             make.leading.equalTo(memoLabel)
             make.trailing.lessThanOrEqualToSuperview().inset(leadingDefaultSpace)
+        }
+        emotionCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(emotionLabel.snp.bottom).offset(topDefaultSpace)
+            make.horizontalEdges.equalToSuperview()
+            make.height.equalTo(safeAreaLayoutGuide).multipliedBy(0.2)
             make.bottom.equalToSuperview().inset(topDefaultSpace)
         }
-        
     }
     
     
