@@ -29,6 +29,7 @@ final class ImageCollectionViewCell: UICollectionViewCell{
         return button
     }()
     
+    //MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureHierarchy()
@@ -39,14 +40,15 @@ final class ImageCollectionViewCell: UICollectionViewCell{
         super.init(coder: coder)
     }
     
+    //MARK: - conFigureHierarchy
     private func configureHierarchy(){
-        contentView.addSubViews([imageView])
-        imageView.addSubview(addImageButton)
+        contentView.addSubViews([imageView, addImageButton])
         addImageButton.isHidden = true
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.mainTintColor?.cgColor
     }
     
+    //MARK: - setConstraints
     private func setConstratins(){
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
