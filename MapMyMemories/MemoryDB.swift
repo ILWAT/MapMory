@@ -16,7 +16,20 @@ class MemoryDB: Object{
     @Persisted var tag: List<TagDB> //태그
     @Persisted var emotion: List<EmotionDB> //감정
     @Persisted var date: Date = Date() //기록 시간
+    @Persisted var memoryDate: Date = Date() //추억의 시간
     @Persisted var imageURL: MutableSet<String> //이미지 URL
+    
+    convenience init(_id: ObjectId, title: String, address: AddressData? = nil, memo: String, tag: List<TagDB>, emotion: List<EmotionDB>, date: Date, memoryDate: Date, imageURL: MutableSet<String>) {
+        self.init()
+        self._id = _id
+        self.title = title
+        self.address = address
+        self.memo = memo
+        self.tag = tag
+        self.emotion = emotion
+        self.memoryDate = memoryDate
+        self.imageURL = imageURL
+    }
     
     
 }
