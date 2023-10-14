@@ -15,9 +15,10 @@ class AppViewController: UITabBarController{
     }
     
     func configureViewController(){
-        let homeVC = HomeViewController()
+        let homeVC = UINavigationController(rootViewController: HomeViewController())
         homeVC.tabBarItem.title = "홈"
         homeVC.tabBarItem.image = UIImage(systemName: "house.fill")
+        
         setViewControllers([homeVC], animated: true)
     }
     

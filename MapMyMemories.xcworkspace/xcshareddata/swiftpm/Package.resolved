@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "emojipicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/htmlprogrammist/EmojiPicker.git",
+      "state" : {
+        "revision" : "6018bd985b01d2355a635569cc702e8a337ed0a1",
+        "version" : "3.0.9"
+      }
+    },
+    {
       "identity" : "realm-core",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/realm-core.git",
