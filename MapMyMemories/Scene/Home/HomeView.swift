@@ -6,10 +6,18 @@
 //
 
 import UIKit
+import Floaty
 
 final class HomeView: BaseMapView{
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViewLayout())
+    let floatingButton = {
+        let view = Floaty()
+        view.buttonColor = .mainTintColor ?? view.buttonColor
+        view.openAnimationType = .slideUp
+        return view
+    }()
+    
     
     //MARK: - Configure
     override func configure() {
@@ -17,7 +25,7 @@ final class HomeView: BaseMapView{
         mapView.showZoomControls = true
         mapView.showLocationButton = true
         
-        addSubViews([collectionView])
+        addSubViews([floatingButton,collectionView])
     }
     
     
@@ -26,6 +34,10 @@ final class HomeView: BaseMapView{
         mapView.snp.makeConstraints { make in
             make.horizontalEdges.bottom.equalTo(safeAreaLayoutGuide)
             make.top.equalToSuperview()
+        }
+        floatingButton.snp.makeConstraints { make in
+            make.size.equalTo(50)
+            make.bottom.trailing.equalTo(safeAreaLayoutGuide).inset(30)
         }
     }
     
