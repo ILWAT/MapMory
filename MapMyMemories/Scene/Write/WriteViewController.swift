@@ -238,7 +238,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     //MARK: - SearchControllerDelegate
     func passingLocation(addressData: Document) {
         
-        guard let lat = Double(addressData.x), let long = Double(addressData.y) else {
+        guard let lat = Double(addressData.y), let long = Double(addressData.x) else {
             self.makeToastMessage(errorType: .network)
             return
         }

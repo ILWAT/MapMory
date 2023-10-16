@@ -21,7 +21,7 @@ final class RealmManager{
     }
     
     ///해당 제네릭 형태의 테이블의 모든 레코드들을 조회한다.
-    func readAllRecord<T: Object>(completionHandler: @escaping(Results<T>) -> Void){
+    func readAllRecord<T: Object>(type: T.Type, completionHandler: @escaping(Results<T>) -> Void){
         completionHandler(realm.objects(T.self))
     }
     

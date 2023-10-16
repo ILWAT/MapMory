@@ -7,26 +7,38 @@
 
 import UIKit
 import Floaty
+import CoreLocationUI
 
 final class HomeView: BaseMapView{
     
     lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViewLayout())
+    
     let floatingButton = {
         let view = Floaty()
-        view.buttonColor = .mainTintColor ?? view.buttonColor
+        view.buttonColor = .mainTintColor ?? view.buttonColor        
         view.openAnimationType = .slideUp
         return view
+    }()
+    
+    let locationButton = {
+        let button = CLLocationButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        button.tintColor = .white
+//        button.backgroundColor =
+        button.icon = .arrowFilled
+        button.label = .none
+        button.cornerRadius = 25.0
+        button.layer.shadowOffset = CGSize(width: 1, height: 1)
+        return button
     }()
     
     
     //MARK: - Configure
     override func configure() {
         super.configure()
-        mapView.showZoomControls = true
-        mapView.showLocationButton = true
         
-        addSubViews([floatingButton,collectionView])
+        addSubViews([floatingButton,collectionView, locationButton])
     }
+    
     
     
     //MARK: - setConstraints
@@ -38,6 +50,9 @@ final class HomeView: BaseMapView{
         floatingButton.snp.makeConstraints { make in
             make.size.equalTo(50)
             make.bottom.trailing.equalTo(safeAreaLayoutGuide).inset(30)
+        }
+        locationButton.snp.makeConstraints { make in
+            make.bottom.leading.equalTo(safeAreaLayoutGuide).inset(30)
         }
     }
     
