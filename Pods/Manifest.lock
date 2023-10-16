@@ -1,24 +1,16 @@
 PODS:
   - Floaty (4.2.0)
-  - NMapsGeometry (1.0.1)
-  - NMapsMap (3.17.0):
-    - NMapsGeometry
 
 DEPENDENCIES:
   - Floaty (~> 4.2.0)
-  - NMapsMap
 
 SPEC REPOS:
   trunk:
     - Floaty
-    - NMapsGeometry
-    - NMapsMap
 
 SPEC CHECKSUMS:
   Floaty: e2bd5a0f6f7f70899e26ff2da31081c8bee8d1b0
-  NMapsGeometry: 53c573ead66466681cf123f99f698dc8071a4b83
-  NMapsMap: a5b909a31b6f3d27a670f6eb2ddc913c38975474
 
-PODFILE CHECKSUM: 212ff489c46ab98597bbad222ab9a566cab8ee7f
+PODFILE CHECKSUM: a5d50ca78093ac3d23742219357324d6c3092800
 
 COCOAPODS: 1.13.0

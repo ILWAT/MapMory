@@ -6,12 +6,13 @@
 //
 
 import UIKit
-import NMapsMap
+import MapKit
 import SnapKit
+
 
 class BaseMapView: BaseView{
     //MARK: - Properties
-    lazy var mapView = NMFNaverMapView(frame: .zero)
+    lazy var mapView = MKMapView(frame: .zero)
     
     //MARK: - Configure
     ///맵뷰를 기본적으로 포함하고 있다.

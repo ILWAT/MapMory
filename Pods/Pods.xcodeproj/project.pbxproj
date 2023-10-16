@@ -6,115 +6,62 @@
 	objectVersion = 56;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = EB98AD101AB530610FAEE48FABDF7F57 /* Build configuration list for PBXAggregateTarget "NMapsGeometry" */;
-			buildPhases = (
-				06DEA16D4139F67FC0E17642FDBEECD0 /* [CP] Copy XCFrameworks */,
-			);
-			dependencies = (
-			);
-			name = NMapsGeometry;
-		};
-		8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 73E737D5F21341C24A13EBC70CD8D471 /* Build configuration list for PBXAggregateTarget "NMapsMap" */;
-			buildPhases = (
-				B521269790554904B95202DE2D5AC59C /* [CP] Copy XCFrameworks */,
-			);
-			dependencies = (
-				31B1BA3DF935DA8BFE992E6E65E6C14D /* PBXTargetDependency */,
-			);
-			name = NMapsMap;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		013A0B965FB7F20BD0F87E8871221253 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE36DEFE00FAEBB1D00EBBC9824D0FD /* FloatyItem.swift */; };
-		197533DE6434BAC49762D75A4E774AB6 /* Floaty-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C605B6F6255539AE46AD5747F22F2C9 /* Floaty-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		013A0B965FB7F20BD0F87E8871221253 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88F5640C34608FFDAAE3BEB5FC3A532 /* FloatyItem.swift */; };
+		197533DE6434BAC49762D75A4E774AB6 /* Floaty-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF742238CFAA76AD1586D8445C7424BB /* Floaty-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		224183C41F3E7E35EE13E9CD3BB36938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		36EDF538E419A9721571437C7F1CA6DD /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696A3A9192DD08A48E1C272C7ECDEB04 /* FloatyViewController.swift */; };
-		44C66CD860C074077671169981D8FD1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		36EDF538E419A9721571437C7F1CA6DD /* FloatyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF8C2AC86F1A705D6A0065D5E3867A2 /* FloatyViewController.swift */; };
 		72C98C8817A912FB7038531F576548C3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		8091A6D5D32B94B079733D9D09EAE747 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9A9CEC3C2DD2A0F60279B69F5FF020 /* FloatyDelegate.swift */; };
-		AE2667975318F94678EA2EF0C5022D20 /* Pods-MapMyMemories-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0B665DFAE40E3F4B10E04F5E545B95 /* Pods-MapMyMemories-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA7F3C2E65B19F2F4BCBFF5567024BAF /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B0EB8BB3B2E5276AF51ED35136022E /* FloatyManager.swift */; };
-		CFF48002B4CCD5968D20995F40D1F9E8 /* Pods-MapMyMemories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B0F8C4FC389F80080874548D86AB57 /* Pods-MapMyMemories-dummy.m */; };
-		D3214C9C78BB1008BBE89C1F11A42B77 /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EEADA3C04E49F6AB0D8E6E2FEB228 /* Floaty.swift */; };
-		D9FB3A64C227528D834DF04B1D14583C /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42250A4A2D9AF3302DD1F5E29E762BB /* FloatyWindow.swift */; };
-		E660E9ACA165C6A86576E1DFE587AA53 /* UIView+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CE84C60C0E43662ABC1F8845FECA7E /* UIView+Draggable.swift */; };
-		E7E9CAB3F831619EA98022C3ACBB0E8F /* Floaty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9663AD56C0F7CD0A8C89C31DA76D8849 /* Floaty-dummy.m */; };
+		8091A6D5D32B94B079733D9D09EAE747 /* FloatyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28F7D296A55B38B440AFA00E908E50F /* FloatyDelegate.swift */; };
+		A678D7A5DA0F38E0EB2557B3CC1227B2 /* Pods-MapMyMemories-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D0B665DFAE40E3F4B10E04F5E545B95 /* Pods-MapMyMemories-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9F302F9BD294A379063A59E264CD75F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		CA7F3C2E65B19F2F4BCBFF5567024BAF /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6391585BE75022227AA204C278409A3B /* FloatyManager.swift */; };
+		D3214C9C78BB1008BBE89C1F11A42B77 /* Floaty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303E2D89DA9C9C4E6B5CF06F68749CD2 /* Floaty.swift */; };
+		D829FF95E98EF9FC42E10580F1B29097 /* Pods-MapMyMemories-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B0F8C4FC389F80080874548D86AB57 /* Pods-MapMyMemories-dummy.m */; };
+		D9FB3A64C227528D834DF04B1D14583C /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8365BEC3FD32E0CC0F33EDA7B468CE4A /* FloatyWindow.swift */; };
+		E660E9ACA165C6A86576E1DFE587AA53 /* UIView+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2EA9C00681793849DEE10741D7C2DA2 /* UIView+Draggable.swift */; };
+		E7E9CAB3F831619EA98022C3ACBB0E8F /* Floaty-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8053B05B5FD6835E6B5C90D8FE153D98 /* Floaty-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0780C4E7ECCB2BD4910247670C1BE643 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 72E614C823EA09AB1AAE80D5CD8A4C58;
-			remoteInfo = NMapsGeometry;
-		};
-		0874D023D2050E231178DEA2DB955EB8 /* PBXContainerItemProxy */ = {
+		B7754C65A29233F5AD899DB272BB712A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2A775A88EA787684F2905BCB73F96D1;
 			remoteInfo = Floaty;
 		};
-		F80A1581E3455A1E175361D3C1C24829 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 72E614C823EA09AB1AAE80D5CD8A4C58;
-			remoteInfo = NMapsGeometry;
-		};
-		FCFB3B23A6454F9F46E5C76151497AE1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8E049F5F4E3BDC647F924FEF22D49D90;
-			remoteInfo = NMapsMap;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02B0EB8BB3B2E5276AF51ED35136022E /* FloatyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyManager.swift; path = Sources/FloatyManager.swift; sourceTree = "<group>"; };
 		0CA07EF4525F8A7EDA22A6F881FF97BE /* Pods-MapMyMemories-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapMyMemories-Info.plist"; sourceTree = "<group>"; };
 		1D0B665DFAE40E3F4B10E04F5E545B95 /* Pods-MapMyMemories-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MapMyMemories-umbrella.h"; sourceTree = "<group>"; };
+		27042E2F2C36187E70B2ADA606B6B58B /* Floaty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Floaty.debug.xcconfig; sourceTree = "<group>"; };
 		2915C263A5C5C8012A8C1E97512DC6A8 /* Floaty */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Floaty; path = Floaty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		394D1A88F2CD4C567C9EEBB7FA371FEA /* NMapsMap-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsMap-xcframeworks.sh"; sourceTree = "<group>"; };
-		3C9695C6858FE2F0E816B59F97182680 /* NMapsMap.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsMap.xcframework; path = framework/NMapsMap.xcframework; sourceTree = "<group>"; };
-		424744EB7107A21AA91CDF067CDA1600 /* NMapsMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.release.xcconfig; sourceTree = "<group>"; };
-		48CEDAF729497B897F4D08B97A3A1FA9 /* Floaty-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Floaty-Info.plist"; sourceTree = "<group>"; };
+		303E2D89DA9C9C4E6B5CF06F68749CD2 /* Floaty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Floaty.swift; path = Sources/Floaty.swift; sourceTree = "<group>"; };
+		35A193D1D8788F2AE65031933487D3C2 /* Floaty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-prefix.pch"; sourceTree = "<group>"; };
 		5B483418E2818074DC28552BD4297F1F /* Pods-MapMyMemories */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-MapMyMemories"; path = Pods_MapMyMemories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6391585BE75022227AA204C278409A3B /* FloatyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyManager.swift; path = Sources/FloatyManager.swift; sourceTree = "<group>"; };
 		647CB187775BEEBAFCBBE19024BF8217 /* Pods-MapMyMemories-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MapMyMemories-acknowledgements.markdown"; sourceTree = "<group>"; };
-		696A3A9192DD08A48E1C272C7ECDEB04 /* FloatyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyViewController.swift; path = Sources/FloatyViewController.swift; sourceTree = "<group>"; };
-		77CE84C60C0E43662ABC1F8845FECA7E /* UIView+Draggable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Draggable.swift"; path = "Sources/UIView+Draggable.swift"; sourceTree = "<group>"; };
 		7D0F052959734ACCEDA19FDBC1262535 /* Pods-MapMyMemories.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MapMyMemories.modulemap"; sourceTree = "<group>"; };
-		8E7EEADA3C04E49F6AB0D8E6E2FEB228 /* Floaty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Floaty.swift; path = Sources/Floaty.swift; sourceTree = "<group>"; };
-		9663AD56C0F7CD0A8C89C31DA76D8849 /* Floaty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Floaty-dummy.m"; sourceTree = "<group>"; };
-		99392484FDD5A2B53FFE99AAA789E24E /* Floaty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Floaty.debug.xcconfig; sourceTree = "<group>"; };
-		9C605B6F6255539AE46AD5747F22F2C9 /* Floaty-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-umbrella.h"; sourceTree = "<group>"; };
+		8053B05B5FD6835E6B5C90D8FE153D98 /* Floaty-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Floaty-dummy.m"; sourceTree = "<group>"; };
+		8365BEC3FD32E0CC0F33EDA7B468CE4A /* FloatyWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyWindow.swift; path = Sources/FloatyWindow.swift; sourceTree = "<group>"; };
+		8A2DA0C540AE31E662B3CBAF6ABBD75C /* Floaty-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Floaty-Info.plist"; sourceTree = "<group>"; };
+		8EF8C2AC86F1A705D6A0065D5E3867A2 /* FloatyViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyViewController.swift; path = Sources/FloatyViewController.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FED9A6F272F6F0C024BABD5BB88F66B /* Floaty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Floaty.release.xcconfig; sourceTree = "<group>"; };
 		A1B0F8C4FC389F80080874548D86AB57 /* Pods-MapMyMemories-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MapMyMemories-dummy.m"; sourceTree = "<group>"; };
-		A29FB4E83E9C9FBA3703995A5AFD4C42 /* NMapsMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsMap.debug.xcconfig; sourceTree = "<group>"; };
 		A32B88CCF893D687AD76F062640E1764 /* Pods-MapMyMemories-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MapMyMemories-frameworks.sh"; sourceTree = "<group>"; };
 		A3E08D82574FC201B7352A3739EA914A /* Pods-MapMyMemories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapMyMemories.debug.xcconfig"; sourceTree = "<group>"; };
-		AFE36DEFE00FAEBB1D00EBBC9824D0FD /* FloatyItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyItem.swift; path = Sources/FloatyItem.swift; sourceTree = "<group>"; };
-		C239B5F0C736860B00E0E8784BCB1C21 /* NMapsGeometry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.release.xcconfig; sourceTree = "<group>"; };
 		C40F00A8C8D55973614C2E9F7EA1FBD9 /* Pods-MapMyMemories-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MapMyMemories-acknowledgements.plist"; sourceTree = "<group>"; };
-		CD0C7E6138B19894F507D77CA847A477 /* Floaty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Floaty.modulemap; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D42250A4A2D9AF3302DD1F5E29E762BB /* FloatyWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyWindow.swift; path = Sources/FloatyWindow.swift; sourceTree = "<group>"; };
-		E1D12BBB417D20D83BFD95A6734208C2 /* NMapsGeometry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NMapsGeometry.debug.xcconfig; sourceTree = "<group>"; };
-		E36CFDF3049073D7431E2439F5ACFDD8 /* NMapsGeometry-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NMapsGeometry-xcframeworks.sh"; sourceTree = "<group>"; };
+		D28F7D296A55B38B440AFA00E908E50F /* FloatyDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyDelegate.swift; path = Sources/FloatyDelegate.swift; sourceTree = "<group>"; };
+		D6715BAB82402C5559BF82F58940E91B /* Floaty.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Floaty.modulemap; sourceTree = "<group>"; };
+		E2EA9C00681793849DEE10741D7C2DA2 /* UIView+Draggable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Draggable.swift"; path = "Sources/UIView+Draggable.swift"; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		EE4D9521BC626BCC466AE0F9F9754340 /* Pods-MapMyMemories.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MapMyMemories.release.xcconfig"; sourceTree = "<group>"; };
-		F6541EEC788D8AD5D90F0350EB3D97FC /* NMapsGeometry.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = NMapsGeometry.xcframework; path = framework/NMapsGeometry.xcframework; sourceTree = "<group>"; };
-		FA9905683BAD2BE86E97E4335C2CE2F6 /* Floaty-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-prefix.pch"; sourceTree = "<group>"; };
-		FD9A9CEC3C2DD2A0F60279B69F5FF020 /* FloatyDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyDelegate.swift; path = Sources/FloatyDelegate.swift; sourceTree = "<group>"; };
+		EF742238CFAA76AD1586D8445C7424BB /* Floaty-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Floaty-umbrella.h"; sourceTree = "<group>"; };
+		EFA0593E89DE2372F7146A9E2B435ED1 /* Floaty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Floaty.release.xcconfig; sourceTree = "<group>"; };
+		F88F5640C34608FFDAAE3BEB5FC3A532 /* FloatyItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatyItem.swift; path = Sources/FloatyItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,37 +74,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B47C569F11ADDE072E2C422C1E334ACE /* Frameworks */ = {
+		88FB38835DE1F70797B2AA7A57CCE1A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C66CD860C074077671169981D8FD1C /* Foundation.framework in Frameworks */,
+				C9F302F9BD294A379063A59E264CD75F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07BE4B5CCA9D6973D1B214F398CE0AD6 /* Support Files */ = {
+		04CFD3CC0A8AD568E4ADC944CD387D80 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E36CFDF3049073D7431E2439F5ACFDD8 /* NMapsGeometry-xcframeworks.sh */,
-				E1D12BBB417D20D83BFD95A6734208C2 /* NMapsGeometry.debug.xcconfig */,
-				C239B5F0C736860B00E0E8784BCB1C21 /* NMapsGeometry.release.xcconfig */,
+				D6715BAB82402C5559BF82F58940E91B /* Floaty.modulemap */,
+				8053B05B5FD6835E6B5C90D8FE153D98 /* Floaty-dummy.m */,
+				8A2DA0C540AE31E662B3CBAF6ABBD75C /* Floaty-Info.plist */,
+				35A193D1D8788F2AE65031933487D3C2 /* Floaty-prefix.pch */,
+				EF742238CFAA76AD1586D8445C7424BB /* Floaty-umbrella.h */,
+				27042E2F2C36187E70B2ADA606B6B58B /* Floaty.debug.xcconfig */,
+				EFA0593E89DE2372F7146A9E2B435ED1 /* Floaty.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/NMapsGeometry";
-			sourceTree = "<group>";
-		};
-		103616DA723F64A3188373EFDAE0ECAE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				394D1A88F2CD4C567C9EEBB7FA371FEA /* NMapsMap-xcframeworks.sh */,
-				A29FB4E83E9C9FBA3703995A5AFD4C42 /* NMapsMap.debug.xcconfig */,
-				424744EB7107A21AA91CDF067CDA1600 /* NMapsMap.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/NMapsMap";
+			path = "../Target Support Files/Floaty";
 			sourceTree = "<group>";
 		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
@@ -166,32 +106,6 @@
 				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1B5674DBACD2B51E189E284B10D80ED8 /* NMapsGeometry */ = {
-			isa = PBXGroup;
-			children = (
-				A974C1DCF8F7742089C4F18D8C5913E2 /* Frameworks */,
-				07BE4B5CCA9D6973D1B214F398CE0AD6 /* Support Files */,
-			);
-			name = NMapsGeometry;
-			path = NMapsGeometry;
-			sourceTree = "<group>";
-		};
-		56C2A51E31820844395E41DCA7D872B0 /* Floaty */ = {
-			isa = PBXGroup;
-			children = (
-				8E7EEADA3C04E49F6AB0D8E6E2FEB228 /* Floaty.swift */,
-				FD9A9CEC3C2DD2A0F60279B69F5FF020 /* FloatyDelegate.swift */,
-				AFE36DEFE00FAEBB1D00EBBC9824D0FD /* FloatyItem.swift */,
-				02B0EB8BB3B2E5276AF51ED35136022E /* FloatyManager.swift */,
-				696A3A9192DD08A48E1C272C7ECDEB04 /* FloatyViewController.swift */,
-				D42250A4A2D9AF3302DD1F5E29E762BB /* FloatyWindow.swift */,
-				77CE84C60C0E43662ABC1F8845FECA7E /* UIView+Draggable.swift */,
-				C497AA380C10EDD5B5FFB0D10D0C1F5D /* Support Files */,
-			);
-			name = Floaty;
-			path = Floaty;
 			sourceTree = "<group>";
 		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
@@ -211,47 +125,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A974C1DCF8F7742089C4F18D8C5913E2 /* Frameworks */ = {
+		696980B28CB5E0494BE0AA6F2ECCAE4F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F6541EEC788D8AD5D90F0350EB3D97FC /* NMapsGeometry.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B0F7428CBB76220B455D517DF45CD1C5 /* NMapsMap */ = {
-			isa = PBXGroup;
-			children = (
-				EE0400963F397A16BA0BC91B5D4D6114 /* Frameworks */,
-				103616DA723F64A3188373EFDAE0ECAE /* Support Files */,
-			);
-			name = NMapsMap;
-			path = NMapsMap;
-			sourceTree = "<group>";
-		};
-		C30963C1F54342141F987450C589F91F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				56C2A51E31820844395E41DCA7D872B0 /* Floaty */,
-				1B5674DBACD2B51E189E284B10D80ED8 /* NMapsGeometry */,
-				B0F7428CBB76220B455D517DF45CD1C5 /* NMapsMap */,
+				F124E2D716358CD0C9159569DD013B35 /* Floaty */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		C497AA380C10EDD5B5FFB0D10D0C1F5D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD0C7E6138B19894F507D77CA847A477 /* Floaty.modulemap */,
-				9663AD56C0F7CD0A8C89C31DA76D8849 /* Floaty-dummy.m */,
-				48CEDAF729497B897F4D08B97A3A1FA9 /* Floaty-Info.plist */,
-				FA9905683BAD2BE86E97E4335C2CE2F6 /* Floaty-prefix.pch */,
-				9C605B6F6255539AE46AD5747F22F2C9 /* Floaty-umbrella.h */,
-				99392484FDD5A2B53FFE99AAA789E24E /* Floaty.debug.xcconfig */,
-				9FED9A6F272F6F0C024BABD5BB88F66B /* Floaty.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Floaty";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -259,7 +138,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				C30963C1F54342141F987450C589F91F /* Pods */,
+				696980B28CB5E0494BE0AA6F2ECCAE4F /* Pods */,
 				D3A28391FC1893ADEE4E918FFCC928F1 /* Products */,
 				62441AB60555D18A63830C7B4B8ED811 /* Targets Support Files */,
 			);
@@ -274,12 +153,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EE0400963F397A16BA0BC91B5D4D6114 /* Frameworks */ = {
+		F124E2D716358CD0C9159569DD013B35 /* Floaty */ = {
 			isa = PBXGroup;
 			children = (
-				3C9695C6858FE2F0E816B59F97182680 /* NMapsMap.xcframework */,
+				303E2D89DA9C9C4E6B5CF06F68749CD2 /* Floaty.swift */,
+				D28F7D296A55B38B440AFA00E908E50F /* FloatyDelegate.swift */,
+				F88F5640C34608FFDAAE3BEB5FC3A532 /* FloatyItem.swift */,
+				6391585BE75022227AA204C278409A3B /* FloatyManager.swift */,
+				8EF8C2AC86F1A705D6A0065D5E3867A2 /* FloatyViewController.swift */,
+				8365BEC3FD32E0CC0F33EDA7B468CE4A /* FloatyWindow.swift */,
+				E2EA9C00681793849DEE10741D7C2DA2 /* UIView+Draggable.swift */,
+				04CFD3CC0A8AD568E4ADC944CD387D80 /* Support Files */,
 			);
-			name = Frameworks;
+			name = Floaty;
+			path = Floaty;
 			sourceTree = "<group>";
 		};
 		F3FC2F7F825F170B41BA7F2F095EE089 /* Pods-MapMyMemories */ = {
@@ -310,11 +197,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF2DB74178488726259F87D253D6D511 /* Headers */ = {
+		F1458D2D6B57FB7ED1229C356905F7DB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE2667975318F94678EA2EF0C5022D20 /* Pods-MapMyMemories-umbrella.h in Headers */,
+				A678D7A5DA0F38E0EB2557B3CC1227B2 /* Pods-MapMyMemories-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,19 +228,17 @@
 		};
 		F161B6FBD70C33589049411BD44489C3 /* Pods-MapMyMemories */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B03DB58EF8419BA20454A2A808EF45C7 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */;
+			buildConfigurationList = 21EBDC308919D554985D55C920432C26 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */;
 			buildPhases = (
-				EF2DB74178488726259F87D253D6D511 /* Headers */,
-				7D0B4D5848A53EBB4C8F58D8AE040A67 /* Sources */,
-				B47C569F11ADDE072E2C422C1E334ACE /* Frameworks */,
-				277489052C64F97BB60E6B6C48386569 /* Resources */,
+				F1458D2D6B57FB7ED1229C356905F7DB /* Headers */,
+				B54E3C70B362D2C990A76D9BBB7C0886 /* Sources */,
+				88FB38835DE1F70797B2AA7A57CCE1A4 /* Frameworks */,
+				A9BA21616989F749B493362F0A52AFED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6CD82843938F67CDCD5C929936643449 /* PBXTargetDependency */,
-				3A7419986EF19C2A2E976B58A2A8DEFF /* PBXTargetDependency */,
-				49728D0EAA17546C36E2F42B7212FE93 /* PBXTargetDependency */,
+				EE7E4E07DB198C760C24FB567F8A2B5E /* PBXTargetDependency */,
 			);
 			name = "Pods-MapMyMemories";
 			productName = Pods_MapMyMemories;
@@ -383,15 +268,13 @@
 			projectRoot = "";
 			targets = (
 				D2A775A88EA787684F2905BCB73F96D1 /* Floaty */,
-				72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */,
-				8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */,
 				F161B6FBD70C33589049411BD44489C3 /* Pods-MapMyMemories */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		277489052C64F97BB60E6B6C48386569 /* Resources */ = {
+		A9BA21616989F749B493362F0A52AFED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -406,43 +289,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		06DEA16D4139F67FC0E17642FDBEECD0 /* [CP] Copy XCFrameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/NMapsGeometry/NMapsGeometry-xcframeworks-input-files.xcfilelist",
-			);
-			name = "[CP] Copy XCFrameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/NMapsGeometry/NMapsGeometry-xcframeworks-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/NMapsGeometry/NMapsGeometry-xcframeworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B521269790554904B95202DE2D5AC59C /* [CP] Copy XCFrameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/NMapsMap/NMapsMap-xcframeworks-input-files.xcfilelist",
-			);
-			name = "[CP] Copy XCFrameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/NMapsMap/NMapsMap-xcframeworks-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/NMapsMap/NMapsMap-xcframeworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6EC1D33B87FB949672AED2B4515DB69D /* Sources */ = {
@@ -460,58 +306,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7D0B4D5848A53EBB4C8F58D8AE040A67 /* Sources */ = {
+		B54E3C70B362D2C990A76D9BBB7C0886 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF48002B4CCD5968D20995F40D1F9E8 /* Pods-MapMyMemories-dummy.m in Sources */,
+				D829FF95E98EF9FC42E10580F1B29097 /* Pods-MapMyMemories-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		31B1BA3DF935DA8BFE992E6E65E6C14D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NMapsGeometry;
-			target = 72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */;
-			targetProxy = F80A1581E3455A1E175361D3C1C24829 /* PBXContainerItemProxy */;
-		};
-		3A7419986EF19C2A2E976B58A2A8DEFF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NMapsGeometry;
-			target = 72E614C823EA09AB1AAE80D5CD8A4C58 /* NMapsGeometry */;
-			targetProxy = 0780C4E7ECCB2BD4910247670C1BE643 /* PBXContainerItemProxy */;
-		};
-		49728D0EAA17546C36E2F42B7212FE93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NMapsMap;
-			target = 8E049F5F4E3BDC647F924FEF22D49D90 /* NMapsMap */;
-			targetProxy = FCFB3B23A6454F9F46E5C76151497AE1 /* PBXContainerItemProxy */;
-		};
-		6CD82843938F67CDCD5C929936643449 /* PBXTargetDependency */ = {
+		EE7E4E07DB198C760C24FB567F8A2B5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Floaty;
 			target = D2A775A88EA787684F2905BCB73F96D1 /* Floaty */;
-			targetProxy = 0874D023D2050E231178DEA2DB955EB8 /* PBXContainerItemProxy */;
+			targetProxy = B7754C65A29233F5AD899DB272BB712A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		138EE7F5840AEF4E4028CA5FAAE9EE6E /* Release */ = {
+		01087ACBFEAEE6D475A4DA097B9442E3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C239B5F0C736860B00E0E8784BCB1C21 /* NMapsGeometry.release.xcconfig */;
+			baseConfigurationReference = EE4D9521BC626BCC466AE0F9F9754340 /* Pods-MapMyMemories.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -577,61 +426,7 @@
 			};
 			name = Release;
 		};
-		4122D12474652D4B94029A59C0DC6010 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1D12BBB417D20D83BFD95A6734208C2 /* NMapsGeometry.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		4AC984B80069C988B3C42D97C553FDF0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE4D9521BC626BCC466AE0F9F9754340 /* Pods-MapMyMemories.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		87E46C7245923B12A1B9922DB537E6FE /* Debug */ = {
+		4A1B051506EEE1E885BAAF32CCAE688A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3E08D82574FC201B7352A3739EA914A /* Pods-MapMyMemories.debug.xcconfig */;
 			buildSettings = {
@@ -670,7 +465,7 @@
 		};
 		E49416477E9FC5E1FB426F6C36F20871 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99392484FDD5A2B53FFE99AAA789E24E /* Floaty.debug.xcconfig */;
+			baseConfigurationReference = 27042E2F2C36187E70B2ADA606B6B58B /* Floaty.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -703,25 +498,9 @@
 			};
 			name = Debug;
 		};
-		E683018BA3CA2E27A39E5DF5619B90F6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A29FB4E83E9C9FBA3703995A5AFD4C42 /* NMapsMap.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		F0BFC825DFA7880BB6E0C8E3F67338F3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FED9A6F272F6F0C024BABD5BB88F66B /* Floaty.release.xcconfig */;
+			baseConfigurationReference = EFA0593E89DE2372F7146A9E2B435ED1 /* Floaty.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -821,26 +600,18 @@
 			};
 			name = Debug;
 		};
-		FE5D137BA104CCBECE001BF38C0AEB3E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 424744EB7107A21AA91CDF067CDA1600 /* NMapsMap.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		21EBDC308919D554985D55C920432C26 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1B051506EEE1E885BAAF32CCAE688A /* Debug */,
+				01087ACBFEAEE6D475A4DA097B9442E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -855,33 +626,6 @@
 			buildConfigurations = (
 				E49416477E9FC5E1FB426F6C36F20871 /* Debug */,
 				F0BFC825DFA7880BB6E0C8E3F67338F3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		73E737D5F21341C24A13EBC70CD8D471 /* Build configuration list for PBXAggregateTarget "NMapsMap" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E683018BA3CA2E27A39E5DF5619B90F6 /* Debug */,
-				FE5D137BA104CCBECE001BF38C0AEB3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B03DB58EF8419BA20454A2A808EF45C7 /* Build configuration list for PBXNativeTarget "Pods-MapMyMemories" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				87E46C7245923B12A1B9922DB537E6FE /* Debug */,
-				4AC984B80069C988B3C42D97C553FDF0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB98AD101AB530610FAEE48FABDF7F57 /* Build configuration list for PBXAggregateTarget "NMapsGeometry" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4122D12474652D4B94029A59C0DC6010 /* Debug */,
-				138EE7F5840AEF4E4028CA5FAAE9EE6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
