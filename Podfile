@@ -6,7 +6,6 @@ target 'MapMyMemories' do
   use_frameworks!
   
 
-  pod 'NMapsMap'
   pod 'Floaty', '~> 4.2.0'
   # Pods for MapMyMemories
 
