@@ -36,12 +36,20 @@ final class HomeViewController: BaseViewController{
     
     //MARK: - Configure
     override func configure() {
-        mainView.mapView.showsUserLocation = true
+        //delegate 채택
+        locationManager.delegate = self
+        mainView.mapView.delegate = self
+        
+        //floating Button 추가
         mainView.floatingButton.addItem("기록하기", icon: UIImage(systemName: "pencil.line")) { item in
             self.navigationController?.pushViewController(WriteViewController(), animated: true)
         }
-        locationManager.delegate = self
+        
+        //CLLocationButton 액션 추가, AnnotationView 등록
         mainView.locationButton.addTarget(self, action: #selector(tappedLocationButton), for: .touchUpInside)
+        mainView.mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMarkerAnnotationView.identifier)
+        
+        
         checkDeviceAuthorization()
     }
     
@@ -134,23 +142,22 @@ final class HomeViewController: BaseViewController{
             print("none MemoryData")
             return}
         
-        var annotations: [MKPointAnnotation] = []
-        
         for element in memoryData{
             guard let lat = element.address?.lat, let long = element.address?.long else {  
                 print("failed load Address")
                 return }
-            let annotation = MKPointAnnotation()
-            annotation.coordinate.latitude = lat
-            annotation.coordinate.longitude = long
-            annotations.append(annotation)
+            
+            let annotation = MemoryAnnotation(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), memoryData: element)
+            
+            mainView.mapView.addAnnotation(annotation)
         }
         
-        mainView.mapView.addAnnotations(annotations)
+        
     }
 }
 
-extension HomeViewController: CLLocationManagerDelegate{
+extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate{
+    //MARK: - CLLocationMangerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last?.coordinate else {return}
         setUserLocation(location)
@@ -166,4 +173,31 @@ extension HomeViewController: CLLocationManagerDelegate{
         checkDeviceAuthorization()
     }
     
+    //MARK: - MKMapViewDelegate
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMarkerAnnotationView.identifier, for: annotation) as? MKMarkerAnnotationView else {
+            print("early exit MKMarker upCasting")
+            return MKAnnotationView(annotation: annotation, reuseIdentifier: MKAnnotationView.identifier) }
+        annotationView.canShowCallout = false
+        
+        annotationView.glyphImage = UIImage(systemName: "star.fill")
+        
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let view = view as? CustomAnnotationView else {
+            print("early exit Annotation")
+            return
+        }
+        print(view.memoryData, #function, "view")
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
+        guard let annotation = annotation as? MemoryAnnotation else { 
+            print("early exit Annotation")
+            return }
+        print(annotation.memoryData, #function, "annotation")
+    }
+
 }

@@ -12,7 +12,11 @@ import SnapKit
 
 class BaseMapView: BaseView{
     //MARK: - Properties
-    lazy var mapView = MKMapView(frame: .zero)
+    lazy var mapView = {
+        let view = MKMapView(frame: .zero)
+        view.showsUserLocation = true
+        return view
+    }()
     
     //MARK: - Configure
     ///맵뷰를 기본적으로 포함하고 있다.
