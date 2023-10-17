@@ -22,12 +22,13 @@ final class HomeView: BaseMapView{
     
     let locationButton = {
         let button = CLLocationButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        button.tintColor = .white
-//        button.backgroundColor =
+        button.tintColor = .black
+        button.backgroundColor = .mainTintColor
         button.icon = .arrowFilled
         button.label = .none
         button.cornerRadius = 25.0
-        button.layer.shadowOffset = CGSize(width: 1, height: 1)
+        button.layer.shadowColor = UIColor.black.withAlphaComponent(0.5).cgColor
+//        button.
         return button
     }()
     
@@ -35,7 +36,7 @@ final class HomeView: BaseMapView{
     //MARK: - Configure
     override func configure() {
         super.configure()
-        
+
         addSubViews([floatingButton,collectionView, locationButton])
     }
     

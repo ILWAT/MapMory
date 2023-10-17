@@ -8,6 +8,6 @@
 import UIKit
 import MapKit
 
-class CustomAnnotation: MKAnnotationView{
-    
+final class CustomAnnotationView: MKMarkerAnnotationView{
+    var memoryData: MemoryDB = MemoryDB()
 }
