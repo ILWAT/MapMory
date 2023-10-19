@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EmotionCollectionViewCell: UICollectionViewCell{
+final class EmotionCollectionViewCell: BaseCollectionViewCell{
     //MARK: - Properteis
     let emotionLabel = {
         let view = UILabel()
@@ -34,32 +34,21 @@ final class EmotionCollectionViewCell: UICollectionViewCell{
         var configure = UIButton.Configuration.plain()
         configure.image = UIImage(systemName: "x.circle.fill")
         configure.baseForegroundColor = .systemGray
-        configure.imagePlacement = .top
+        configure.imagePlacement = .trailing
         button.configuration = configure
         button.isHidden = true
         return button
     }()
     
-    //MARK: - Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureHierarchy()
-        setConstratins()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
     //MARK: - configureHierarchy
-    private func configureHierarchy(){
+    override func configureHierarchy(){
         contentView.addSubViews([emotionLabel, addEmotionButton, deleteButton])
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.mainTintColor?.cgColor
     }
     
     //MARK: - setConstratins
-    private func setConstratins(){
+    override func setConstratins(){
         emotionLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
