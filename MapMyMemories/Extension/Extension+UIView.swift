@@ -15,6 +15,9 @@ extension UIView{
         }
     }
     
+    static let defaultFontSize: CGFloat = 15
+    
+    
     func addSubViews(_ subViews: [UIView]){
         subViews.forEach { element in
             self.addSubview(element)
