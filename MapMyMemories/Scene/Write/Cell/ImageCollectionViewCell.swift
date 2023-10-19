@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-final class ImageCollectionViewCell: UICollectionViewCell{
+final class ImageCollectionViewCell: BaseCollectionViewCell{
     //MARK: - Properteis
     let imageView = {
         let view = UIImageView(frame: .zero)
@@ -29,19 +29,8 @@ final class ImageCollectionViewCell: UICollectionViewCell{
         return button
     }()
     
-    //MARK: - init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureHierarchy()
-        setConstratins()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
     //MARK: - conFigureHierarchy
-    private func configureHierarchy(){
+    override func configureHierarchy(){
         contentView.addSubViews([imageView, addImageButton])
         addImageButton.isHidden = true
         self.layer.borderWidth = 1
@@ -49,7 +38,7 @@ final class ImageCollectionViewCell: UICollectionViewCell{
     }
     
     //MARK: - setConstraints
-    private func setConstratins(){
+    override func setConstratins(){
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
