@@ -14,6 +14,8 @@
 		DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */; };
 		DE6D2AFA2ADD81CA00694CB0 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D2AF92ADD81C900694CB0 /* CustomAnnotationView.swift */; };
 		DE6D2AFE2ADDD34A00694CB0 /* MemoryAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D2AFD2ADDD34A00694CB0 /* MemoryAnnotation.swift */; };
+		DE843D642ADEC5C4008E065D /* SummaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843D632ADEC5C4008E065D /* SummaryCollectionViewCell.swift */; };
+		DE843D662ADEC64B008E065D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843D652ADEC64B008E065D /* BaseCollectionViewCell.swift */; };
 		DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393B2AC1954D0099D1AA /* AppDelegate.swift */; };
 		DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */; };
 		DE8939452AC1954F0099D1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8939442AC1954F0099D1AA /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		DE90B52F2AD5604400B6A694 /* ToastMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B52E2AD5604400B6A694 /* ToastMessageType.swift */; };
 		DE90B56D2AD679D500B6A694 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B56C2AD679D400B6A694 /* Observable.swift */; };
 		DE90B5702AD67B6600B6A694 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */; };
+		DE95FB682AE0E92400933D90 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB672AE0E92400933D90 /* DetailViewController.swift */; };
+		DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6A2AE0E9A400933D90 /* DetailView.swift */; };
 		DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216C2AC959DE00B00A26 /* WriteView.swift */; };
 		DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216E2AC959E900B00A26 /* WriteViewController.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +61,8 @@
 		DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		DE6D2AF92ADD81C900694CB0 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		DE6D2AFD2ADDD34A00694CB0 /* MemoryAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAnnotation.swift; sourceTree = "<group>"; };
+		DE843D632ADEC5C4008E065D /* SummaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE843D652ADEC64B008E065D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE8939382AC1954D0099D1AA /* MapMyMemories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyMemories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE89393B2AC1954D0099D1AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE89393D2AC1954D0099D1AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 		DE90B52E2AD5604400B6A694 /* ToastMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessageType.swift; sourceTree = "<group>"; };
 		DE90B56C2AD679D400B6A694 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
+		DE95FB672AE0E92400933D90 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DE95FB6A2AE0E9A400933D90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = MapMyMemories/Scene/DetailView.swift; sourceTree = SOURCE_ROOT; };
 		DEBB216C2AC959DE00B00A26 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		DEBB216E2AC959E900B00A26 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +149,14 @@
 			path = Annotation;
 			sourceTree = "<group>";
 		};
+		DE843D622ADEC56E008E065D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE843D632ADEC5C4008E065D /* SummaryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		DE89392F2AC1954D0099D1AA = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +204,7 @@
 		DE8939582AC197640099D1AA /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				DE95FB692AE0E92A00933D90 /* Detail */,
 				DE90B56E2AD67B3B00B6A694 /* ViewModel */,
 				DEBB216B2AC959BE00B00A26 /* Write */,
 				DE8939702AC324850099D1AA /* Home */,
@@ -241,6 +258,7 @@
 				DE89396A2AC1B1F80099D1AA /* BaseViewController.swift */,
 				DE89396E2AC320C60099D1AA /* BaseMapView.swift */,
 				DE8939732AC326540099D1AA /* BaseView.swift */,
+				DE843D652ADEC64B008E065D /* BaseCollectionViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -248,6 +266,7 @@
 		DE8939702AC324850099D1AA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DE843D622ADEC56E008E065D /* Cell */,
 				DE6D2AF82ADD81B400694CB0 /* Annotation */,
 				DE8939712AC324940099D1AA /* HomeViewController.swift */,
 				DE8939902AC860C00099D1AA /* HomeView.swift */,
@@ -287,6 +306,15 @@
 				DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DE95FB692AE0E92A00933D90 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				DE95FB672AE0E92400933D90 /* DetailViewController.swift */,
+				DE95FB6A2AE0E9A400933D90 /* DetailView.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		DEBB216B2AC959BE00B00A26 /* Write */ = {
@@ -438,6 +466,7 @@
 				DE6D2AFE2ADDD34A00694CB0 /* MemoryAnnotation.swift in Sources */,
 				DE90B5702AD67B6600B6A694 /* WriteViewModel.swift in Sources */,
 				DE90B52A2AD5321300B6A694 /* SelectDateView.swift in Sources */,
+				DE95FB682AE0E92400933D90 /* DetailViewController.swift in Sources */,
 				DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */,
 				DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */,
 				DE90B5212AD3421800B6A694 /* SearchLocationModel.swift in Sources */,
@@ -446,14 +475,17 @@
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
 				DE90B56D2AD679D500B6A694 /* Observable.swift in Sources */,
 				DE90B52F2AD5604400B6A694 /* ToastMessageType.swift in Sources */,
+				DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */,
 				DE90B5252AD346EE00B6A694 /* Router.swift in Sources */,
 				DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */,
 				DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */,
 				DE90B5232AD3438700B6A694 /* APIManager.swift in Sources */,
 				DE20B8922AD861EF006FD060 /* EmotionCollectionViewCell.swift in Sources */,
 				DE90B5282AD531D300B6A694 /* SelectDateViewController.swift in Sources */,
+				DE843D642ADEC5C4008E065D /* SummaryCollectionViewCell.swift in Sources */,
 				DE8939742AC326540099D1AA /* BaseView.swift in Sources */,
 				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
+				DE843D662ADEC64B008E065D /* BaseCollectionViewCell.swift in Sources */,
 				DE8939912AC860C00099D1AA /* HomeView.swift in Sources */,
 				DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */,
 				DE90B51D2AD3260800B6A694 /* SearchLocationViewController.swift in Sources */,

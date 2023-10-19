@@ -21,6 +21,12 @@ final class HomeViewController: BaseViewController{
     
     var memoryData: Results<MemoryDB>?
     
+    var displayCellData: [MemoryDB] = []{
+        didSet{
+            mainView.collectionView.reloadData()
+        }
+    }
+    
     
     
     //MARK: - LifeCycle
@@ -39,6 +45,8 @@ final class HomeViewController: BaseViewController{
         //delegate 채택
         locationManager.delegate = self
         mainView.mapView.delegate = self
+        mainView.collectionView.delegate = self
+        mainView.collectionView.dataSource = self
         
         //floating Button 추가
         mainView.floatingButton.addItem("기록하기", icon: UIImage(systemName: "pencil.line")) { item in
@@ -56,6 +64,8 @@ final class HomeViewController: BaseViewController{
     
     //MARK: - SetNavigation
     override func setNavigation() {
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        self.title = "내 추억 장소"
     }
     
     //MARK: - Action
@@ -148,7 +158,7 @@ final class HomeViewController: BaseViewController{
                 return }
             
             let annotation = MemoryAnnotation(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), memoryData: element)
-            
+    
             mainView.mapView.addAnnotation(annotation)
         }
         
@@ -156,7 +166,8 @@ final class HomeViewController: BaseViewController{
     }
 }
 
-extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate{
+extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource{
+    
     //MARK: - CLLocationMangerDelegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last?.coordinate else {return}
@@ -185,19 +196,42 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate{
         return annotationView
     }
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        guard let view = view as? CustomAnnotationView else {
-            print("early exit Annotation")
-            return
-        }
-        print(view.memoryData, #function, "view")
-    }
-    
     func mapView(_ mapView: MKMapView, didSelect annotation: MKAnnotation) {
         guard let annotation = annotation as? MemoryAnnotation else { 
             print("early exit Annotation")
             return }
-        print(annotation.memoryData, #function, "annotation")
+        
+        if let lat = annotation.memoryData.address?.lat, let long = annotation.memoryData.address?.long {
+            mainView.mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: long), latitudinalMeters: 500, longitudinalMeters: 500), animated: true)
+        }
+       
+        
+        //클릭시 간략한 정보를 보이기
+        mainView.collectionView.isHidden = false
+        displayCellData = [annotation.memoryData]
+        
     }
-
+    
+    func mapView(_ mapView: MKMapView, didDeselect annotation: MKAnnotation) {
+        mainView.collectionView.isHidden = true
+    }
+    
+//    func mapView(_ mapView: MKMapView, clusterAnnotationForMemberAnnotations memberAnnotations: [MKAnnotation]) -> MKClusterAnnotation {
+//        <#code#>
+//    }
+    //MARK: - CollectionView Delegate & DataSource
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return displayCellData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SummaryCollectionViewCell.identifier, for: indexPath) as? SummaryCollectionViewCell else {return UICollectionViewCell()}
+        
+        cell.setCellUI(image: nil, title: displayCellData[indexPath.item].title, location: displayCellData[indexPath.item].address?.addressName ?? "데이터 로드에 실패했습니다.")
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("didSelectItem")
+    }
 }

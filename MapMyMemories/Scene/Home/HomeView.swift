@@ -11,7 +11,14 @@ import CoreLocationUI
 
 final class HomeView: BaseMapView{
     
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViewLayout())
+    lazy var collectionView = {
+        let view = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViewLayout())
+        view.isHidden = true
+        view.backgroundColor = .clear
+        view.register(SummaryCollectionViewCell.self, forCellWithReuseIdentifier: SummaryCollectionViewCell.identifier)
+       return view
+    }()
+    
     
     let floatingButton = {
         let view = Floaty()
@@ -37,7 +44,7 @@ final class HomeView: BaseMapView{
     override func configure() {
         super.configure()
 
-        addSubViews([floatingButton,collectionView, locationButton])
+        addSubViews([floatingButton, locationButton, collectionView])
     }
     
     
@@ -55,15 +62,21 @@ final class HomeView: BaseMapView{
         locationButton.snp.makeConstraints { make in
             make.bottom.leading.equalTo(safeAreaLayoutGuide).inset(30)
         }
+        collectionView.snp.makeConstraints { make in
+            make.width.bottom.equalTo(safeAreaLayoutGuide)
+            make.height.equalToSuperview().multipliedBy(0.2)
+        }
     }
     
     //MARK: - Helper
     private func configureCollectionViewLayout() -> UICollectionViewLayout{
         let layout = UICollectionViewFlowLayout()
         let spacing = CGFloat(10)
-        let itemWidth = (self.window?.screen.bounds.width ?? self.frame.width - spacing) * 0.8
+        let itemWidth = (self.window?.windowScene?.screen.bounds.width ?? UIScreen.main.bounds.width) - (spacing * 2)
         
-        layout.itemSize = CGSize(width: itemWidth, height: 100)
+        layout.scrollDirection = .horizontal
+        layout.itemSize = CGSize(width: itemWidth, height: 150)
+        layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         layout.minimumInteritemSpacing = spacing
         
         return layout
