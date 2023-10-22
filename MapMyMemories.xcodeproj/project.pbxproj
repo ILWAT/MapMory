@@ -48,8 +48,11 @@
 		DE90B5702AD67B6600B6A694 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */; };
 		DE95FB682AE0E92400933D90 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB672AE0E92400933D90 /* DetailViewController.swift */; };
 		DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6A2AE0E9A400933D90 /* DetailView.swift */; };
+		DE95FB6E2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */; };
+		DE95FB702AE1587500933D90 /* CollectionViewTagType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */; };
 		DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216C2AC959DE00B00A26 /* WriteView.swift */; };
 		DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216E2AC959E900B00A26 /* WriteViewController.swift */; };
+		DED7786C2AE54AF300629034 /* ViewingEmotionCollectinoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7786B2AE54AF300629034 /* ViewingEmotionCollectinoViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,8 +95,11 @@
 		DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
 		DE95FB672AE0E92400933D90 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE95FB6A2AE0E9A400933D90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = MapMyMemories/Scene/DetailView.swift; sourceTree = SOURCE_ROOT; };
+		DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTagType.swift; sourceTree = "<group>"; };
 		DEBB216C2AC959DE00B00A26 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		DEBB216E2AC959E900B00A26 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		DED7786B2AE54AF300629034 /* ViewingEmotionCollectinoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingEmotionCollectinoViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				DE90B52E2AD5604400B6A694 /* ToastMessageType.swift */,
+				DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -311,10 +318,20 @@
 		DE95FB692AE0E92A00933D90 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				DE95FB6C2AE1073100933D90 /* Cell */,
 				DE95FB672AE0E92400933D90 /* DetailViewController.swift */,
 				DE95FB6A2AE0E9A400933D90 /* DetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		DE95FB6C2AE1073100933D90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */,
+				DED7786B2AE54AF300629034 /* ViewingEmotionCollectinoViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DEBB216B2AC959BE00B00A26 /* Write */ = {
@@ -471,12 +488,15 @@
 				DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */,
 				DE90B5212AD3421800B6A694 /* SearchLocationModel.swift in Sources */,
 				DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */,
+				DED7786C2AE54AF300629034 /* ViewingEmotionCollectinoViewCell.swift in Sources */,
 				DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */,
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
 				DE90B56D2AD679D500B6A694 /* Observable.swift in Sources */,
 				DE90B52F2AD5604400B6A694 /* ToastMessageType.swift in Sources */,
 				DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */,
 				DE90B5252AD346EE00B6A694 /* Router.swift in Sources */,
+				DE95FB6E2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift in Sources */,
+				DE95FB702AE1587500933D90 /* CollectionViewTagType.swift in Sources */,
 				DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */,
 				DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */,
 				DE90B5232AD3438700B6A694 /* APIManager.swift in Sources */,
