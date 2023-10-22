@@ -64,8 +64,6 @@ final class HomeViewController: BaseViewController{
     
     //MARK: - SetNavigation
     override func setNavigation() {
-        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
-        self.title = "내 추억 장소"
     }
     
     //MARK: - Action
@@ -233,5 +231,10 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItem")
+        let detailVC = DetailViewController()
+        
+        detailVC.setMemoryData(data: displayCellData[indexPath.item])
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

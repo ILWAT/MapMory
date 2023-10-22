@@ -172,10 +172,10 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.tag{
-        case collectionViewType.image.rawValue:
+        case CollectionViewTagType.image.rawValue:
             return images.count + 1
             
-        case collectionViewType.emotion.rawValue:
+        case CollectionViewTagType.emotion.rawValue:
             return emotion.count + 1
             
         default:
@@ -185,7 +185,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView.tag{
-        case collectionViewType.image.rawValue:
+        case CollectionViewTagType.image.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
             
             cell.addImageButton.addTarget(self, action: #selector(tappedAddImageBtn), for: .touchUpInside)
@@ -200,7 +200,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
             
             return cell
             
-        case collectionViewType.emotion.rawValue:
+        case CollectionViewTagType.emotion.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmotionCollectionViewCell.identifier, for: indexPath) as? EmotionCollectionViewCell else { return UICollectionViewCell() }
             
             cell.addEmotionButton.addTarget(self, action: #selector(tappedAddEmotionBtn), for: .touchUpInside)
@@ -224,10 +224,10 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView.tag{
-        case collectionViewType.image.rawValue:
+        case CollectionViewTagType.image.rawValue:
             break
             
-        case collectionViewType.emotion.rawValue:
+        case CollectionViewTagType.emotion.rawValue:
             break
             
         default:
