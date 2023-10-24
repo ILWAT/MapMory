@@ -18,6 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        //Deprecated될 UIScreen.main을 대체할 ScreenSize를 UserDefaults에 저장후 불러오기
+        UserDefaults.standard.setValue(windowScene.screen.bounds.width, forKey: UserDefaultsIdentifier.screenWidth.rawValue)
+        UserDefaults.standard.setValue(windowScene.screen.bounds.height, forKey: UserDefaultsIdentifier.screenHeight.rawValue)
         
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = AppViewController()
