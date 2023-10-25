@@ -7,10 +7,7 @@
 
 import UIKit
 
-enum collectionViewType: Int{
-    case image = 0
-    case emotion
-}
+
 
 final class WriteView: BaseView{
     //MARK: - Properties
@@ -90,7 +87,7 @@ final class WriteView: BaseView{
     lazy var imageCollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.setCollectionViewLayout())
         view.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: ImageCollectionViewCell.identifier)
-        view.tag = collectionViewType.image.rawValue
+        view.tag = CollectionViewTagType.image.rawValue
         return view
     }()
     
@@ -143,7 +140,7 @@ final class WriteView: BaseView{
     
     lazy var emotionCollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: setCollectionViewLayout())
-        view.tag = collectionViewType.emotion.rawValue
+        view.tag = CollectionViewTagType.emotion.rawValue
         view.register(EmotionCollectionViewCell.self, forCellWithReuseIdentifier: EmotionCollectionViewCell.identifier)
         return view
     }()

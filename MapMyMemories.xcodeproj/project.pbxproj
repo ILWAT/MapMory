@@ -10,6 +10,8 @@
 		4675B0914184588098E10F50 /* Pods_MapMyMemories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */; };
 		DE20B8902AD85DE4006FD060 /* EmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = DE20B88F2AD85DE4006FD060 /* EmojiPicker */; };
 		DE20B8922AD861EF006FD060 /* EmotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20B8912AD861EF006FD060 /* EmotionCollectionViewCell.swift */; };
+		DE2201DC2AE7B8080096088A /* UserDefaultsIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2201DB2AE7B8080096088A /* UserDefaultsIdentifier.swift */; };
+		DE2201DE2AE7E3E90096088A /* ViewingImageCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2201DD2AE7E3E90096088A /* ViewingImageCollectionViewModel.swift */; };
 		DE43BD3C2ACE866200FD81DD /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */; };
 		DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */; };
 		DE6D2AFA2ADD81CA00694CB0 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D2AF92ADD81C900694CB0 /* CustomAnnotationView.swift */; };
@@ -48,8 +50,12 @@
 		DE90B5702AD67B6600B6A694 /* WriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */; };
 		DE95FB682AE0E92400933D90 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB672AE0E92400933D90 /* DetailViewController.swift */; };
 		DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6A2AE0E9A400933D90 /* DetailView.swift */; };
+		DE95FB6E2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */; };
+		DE95FB702AE1587500933D90 /* CollectionViewTagType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */; };
 		DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216C2AC959DE00B00A26 /* WriteView.swift */; };
 		DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216E2AC959E900B00A26 /* WriteViewController.swift */; };
+		DED7786C2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7786B2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift */; };
+		DED7786E2AE5F22900629034 /* DocumentFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7786D2AE5F22900629034 /* DocumentFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +63,8 @@
 		45AA7D376B33E8B0471AABFE /* Pods-MapMyMemories.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapMyMemories.debug.xcconfig"; path = "Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories.debug.xcconfig"; sourceTree = "<group>"; };
 		B23CCD6B9BE00A648F8BB850 /* Pods_MapMyMemories.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapMyMemories.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE20B8912AD861EF006FD060 /* EmotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE2201DB2AE7B8080096088A /* UserDefaultsIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsIdentifier.swift; sourceTree = "<group>"; };
+		DE2201DD2AE7E3E90096088A /* ViewingImageCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingImageCollectionViewModel.swift; sourceTree = "<group>"; };
 		DE43BD3B2ACE866200FD81DD /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		DE6D2AF92ADD81C900694CB0 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
@@ -92,8 +100,12 @@
 		DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewModel.swift; sourceTree = "<group>"; };
 		DE95FB672AE0E92400933D90 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DE95FB6A2AE0E9A400933D90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = MapMyMemories/Scene/DetailView.swift; sourceTree = SOURCE_ROOT; };
+		DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTagType.swift; sourceTree = "<group>"; };
 		DEBB216C2AC959DE00B00A26 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		DEBB216E2AC959E900B00A26 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		DED7786B2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingEmotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		DED7786D2AE5F22900629034 /* DocumentFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +290,9 @@
 			isa = PBXGroup;
 			children = (
 				DE90B52E2AD5604400B6A694 /* ToastMessageType.swift */,
+				DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */,
+				DED7786D2AE5F22900629034 /* DocumentFileManager.swift */,
+				DE2201DB2AE7B8080096088A /* UserDefaultsIdentifier.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -304,6 +319,7 @@
 			children = (
 				DE90B56C2AD679D400B6A694 /* Observable.swift */,
 				DE90B56F2AD67B6600B6A694 /* WriteViewModel.swift */,
+				DE2201DD2AE7E3E90096088A /* ViewingImageCollectionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -311,10 +327,20 @@
 		DE95FB692AE0E92A00933D90 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				DE95FB6C2AE1073100933D90 /* Cell */,
 				DE95FB672AE0E92400933D90 /* DetailViewController.swift */,
 				DE95FB6A2AE0E9A400933D90 /* DetailView.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		DE95FB6C2AE1073100933D90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */,
+				DED7786B2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		DEBB216B2AC959BE00B00A26 /* Write */ = {
@@ -471,12 +497,18 @@
 				DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */,
 				DE90B5212AD3421800B6A694 /* SearchLocationModel.swift in Sources */,
 				DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */,
+				DED7786C2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift in Sources */,
+				DE2201DC2AE7B8080096088A /* UserDefaultsIdentifier.swift in Sources */,
 				DE89393E2AC1954D0099D1AA /* SceneDelegate.swift in Sources */,
 				DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */,
 				DE90B56D2AD679D500B6A694 /* Observable.swift in Sources */,
 				DE90B52F2AD5604400B6A694 /* ToastMessageType.swift in Sources */,
 				DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */,
 				DE90B5252AD346EE00B6A694 /* Router.swift in Sources */,
+				DED7786E2AE5F22900629034 /* DocumentFileManager.swift in Sources */,
+				DE2201DE2AE7E3E90096088A /* ViewingImageCollectionViewModel.swift in Sources */,
+				DE95FB6E2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift in Sources */,
+				DE95FB702AE1587500933D90 /* CollectionViewTagType.swift in Sources */,
 				DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */,
 				DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */,
 				DE90B5232AD3438700B6A694 /* APIManager.swift in Sources */,

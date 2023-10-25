@@ -62,7 +62,7 @@ final class WriteViewController: BaseViewController{
     //MARK: - Action
     @objc func tappedAddImageBtn(_ sender: UIButton){
         var configuration = PHPickerConfiguration()
-        configuration.selectionLimit = 3
+        configuration.selectionLimit = 5
         configuration.filter = .images
         
         let picker = PHPickerViewController(configuration: configuration)
@@ -134,6 +134,12 @@ final class WriteViewController: BaseViewController{
             inputData.emotion.append(EmotionDB(emotion: element, emotionDate: Date()))
         }
         
+        var imageCount = 0
+        images.forEach { image in
+            DocumentFileManager.shared.saveImageToDocument(fileName: ImageFileNameExtension.jpeg(fileName: "\(self.inputData._id)_\(imageCount)"), image: image)
+            inputData.imageURL.insert("\(self.inputData._id)_\(imageCount)")
+            imageCount += 1
+        }
         RealmManager.shared.writeRecord(data: inputData)
         
         self.navigationController?.popViewController(animated: true)
@@ -145,7 +151,6 @@ extension WriteViewController: PHPickerViewControllerDelegate{
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
         images = []
-        
         
         results.forEach { result in
             print(result)
@@ -160,7 +165,7 @@ extension WriteViewController: PHPickerViewControllerDelegate{
                 }
             }
         }
-        
+        print(images)
     }
     
     
@@ -172,10 +177,10 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.tag{
-        case collectionViewType.image.rawValue:
+        case CollectionViewTagType.image.rawValue:
             return images.count + 1
             
-        case collectionViewType.emotion.rawValue:
+        case CollectionViewTagType.emotion.rawValue:
             return emotion.count + 1
             
         default:
@@ -185,7 +190,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView.tag{
-        case collectionViewType.image.rawValue:
+        case CollectionViewTagType.image.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
             
             cell.addImageButton.addTarget(self, action: #selector(tappedAddImageBtn), for: .touchUpInside)
@@ -200,7 +205,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
             
             return cell
             
-        case collectionViewType.emotion.rawValue:
+        case CollectionViewTagType.emotion.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmotionCollectionViewCell.identifier, for: indexPath) as? EmotionCollectionViewCell else { return UICollectionViewCell() }
             
             cell.addEmotionButton.addTarget(self, action: #selector(tappedAddEmotionBtn), for: .touchUpInside)
@@ -224,10 +229,10 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView.tag{
-        case collectionViewType.image.rawValue:
+        case CollectionViewTagType.image.rawValue:
             break
             
-        case collectionViewType.emotion.rawValue:
+        case CollectionViewTagType.emotion.rawValue:
             break
             
         default:
@@ -248,6 +253,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
         inputData.address = address
         
         self.mainView.locationTextField.text = self.inputData.address?.placeName
+        
     }
     
     //MARK: - EmojiPickerDelegate
