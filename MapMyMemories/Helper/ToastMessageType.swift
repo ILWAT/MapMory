@@ -11,6 +11,7 @@ enum ToastMessageType{
     case network
     case noneInputText
     case failedloadLocation
+    case failedSaveImageDocument
     
     
     var getMessage: String{
@@ -21,6 +22,8 @@ enum ToastMessageType{
             return "필수 입력 값을 입력해주세요."
         case .failedloadLocation:
             return "위치 서비스 권한 허용을 확인해주세요."
+        case .failedSaveImageDocument:
+            return "이미지를 저장에 실패했습니다. 다시 시도해주세요."
         }
     }
     
@@ -28,7 +31,7 @@ enum ToastMessageType{
         switch self {
         case .network:
             return "네트워크 연결에 실패했습니다."
-        case .noneInputText:
+        case .noneInputText, .failedSaveImageDocument:
             return nil
         case .failedloadLocation:
             return "위치 서비스를 불러오는데 실패했습니다."
