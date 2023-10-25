@@ -7,17 +7,18 @@
 
 import UIKit
 
-class ViewingEmotionCollectinoViewCell: BaseCollectionViewCell{
+final class ViewingEmotionCollectionViewCell: BaseCollectionViewCell{
     //MARK: - Properties
-    let emotionLabel = {
+    private let emotionLabel = {
         let label = UILabel()
         label.font = .boldSystemFont(ofSize: 15)
+        label.textAlignment = .center
         return label
     }()
     
     //MARK: - configureHierarchy
     override func configureHierarchy() {
-        contentView.backgroundColor = .systemGray
+        contentView.backgroundColor = .systemGray6
         contentView.addSubview(emotionLabel)
     }
     
@@ -26,5 +27,9 @@ class ViewingEmotionCollectinoViewCell: BaseCollectionViewCell{
         emotionLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    func setLabel(text: String){
+        self.emotionLabel.text = text
     }
 }

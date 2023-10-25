@@ -11,7 +11,11 @@ class DetailView: BaseView{
     //MARK: - Properties
     lazy var imageCollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.setImageCollectionViewLayout())
+        view.tag = CollectionViewTagType.image.rawValue
         view.register(ViewingImageCollectionViewCell.self, forCellWithReuseIdentifier: ViewingImageCollectionViewCell.identifier)
+        view.showsVerticalScrollIndicator = false
+        view.showsHorizontalScrollIndicator = false
+        view.isPagingEnabled = true
         return view
     }()
     
@@ -61,7 +65,9 @@ class DetailView: BaseView{
     
     lazy var emotionCollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.setEmotionCollectionViewLayout())
-        view.register(ViewingImageCollectionViewCell.self, forCellWithReuseIdentifier: ViewingImageCollectionViewCell.identifier)
+        view.register(ViewingEmotionCollectionViewCell.self, forCellWithReuseIdentifier: ViewingEmotionCollectionViewCell.identifier)
+        view.showsVerticalScrollIndicator = false
+        view.tag = CollectionViewTagType.emotion.rawValue
         return view
     }()
     
@@ -76,12 +82,20 @@ class DetailView: BaseView{
         view.backgroundColor = .black
         return view
     }()
+
+    let imageRatioControl = {
+        let view = UISegmentedControl()
+        view.insertSegment(with: UIImage(systemName: "rectangle.and.arrow.up.right.and.arrow.down.left"), at: 0, animated: true)
+        view.insertSegment(with: UIImage(systemName: "rectangle.and.arrow.up.right.and.arrow.down.left.slash"), at: 1, animated: true)
+        view.selectedSegmentIndex = 0
+        return view
+    }()
     
     //MARK: - configure
     override func configure() {
         self.addSubViews([imageCollectionView, pageControl, subScrollView])
         subScrollView.addSubview(scrollContentView)
-        scrollContentView.addSubViews([titleLabel, dateLabel, divideView, memoTextView, emotionCollectionView])
+        scrollContentView.addSubViews([titleLabel, dateLabel, divideView, memoTextView, emotionCollectionView, imageRatioControl])
     }
     
     
@@ -90,7 +104,7 @@ class DetailView: BaseView{
         let defaultSpacing = 10
         imageCollectionView.snp.makeConstraints { make in
             make.top.horizontalEdges.equalTo(safeAreaLayoutGuide)
-            make.height.equalToSuperview().multipliedBy(0.3)
+            make.height.equalTo(safeAreaLayoutGuide).multipliedBy(0.3)
         }
         pageControl.snp.makeConstraints { make in
             make.bottom.equalTo(imageCollectionView)
@@ -115,6 +129,10 @@ class DetailView: BaseView{
             make.trailing.lessThanOrEqualToSuperview().inset(defaultSpacing)
             make.top.equalTo(titleLabel.snp.bottom).offset(defaultSpacing)
         }
+        imageRatioControl.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(defaultSpacing)
+            make.top.equalTo(titleLabel)
+        }
         divideView.snp.makeConstraints { make in
             make.top.equalTo(dateLabel.snp.bottom)
             make.horizontalEdges.equalToSuperview().inset(defaultSpacing)
@@ -126,7 +144,7 @@ class DetailView: BaseView{
             make.height.equalTo(subScrollView.frameLayoutGuide).multipliedBy(0.5)
         }
         emotionCollectionView.snp.makeConstraints { make in
-            make.top.equalTo(memoTextView.snp.bottom)
+            make.top.equalTo(memoTextView.snp.bottom).offset(defaultSpacing)
             make.horizontalEdges.equalToSuperview()
             make.height.equalTo(safeAreaLayoutGuide).multipliedBy(0.1)
             make.bottom.equalToSuperview().inset(defaultSpacing)
@@ -136,20 +154,37 @@ class DetailView: BaseView{
     }
     
     //MARK: - Helper
-    func setEmotionCollectionViewLayout() -> UICollectionViewLayout{
+    private func setEmotionCollectionViewLayout() -> UICollectionViewLayout{
         let layout = UICollectionViewFlowLayout()
         let defaultSpacing: CGFloat = 10
         layout.sectionInset = UIEdgeInsets(top: defaultSpacing, left: defaultSpacing, bottom: defaultSpacing, right: defaultSpacing)
         layout.minimumInteritemSpacing = defaultSpacing
+        layout.scrollDirection = .horizontal
         
         return layout
     }
     
-    func setImageCollectionViewLayout() -> UICollectionViewLayout{
+    private func setImageCollectionViewLayout() -> UICollectionViewLayout{
         let layout = UICollectionViewFlowLayout()
         let defaultSpacing: CGFloat = 10
-        layout.sectionInset = UIEdgeInsets(top: 0, left: defaultSpacing, bottom: 0, right: defaultSpacing)
-        layout.minimumInteritemSpacing = defaultSpacing
+        
+        let screenWidth: CGFloat = CGFloat(UserDefaults.standard.float(forKey: UserDefaultsIdentifier.screenWidth.rawValue))
+        let screenHeight: CGFloat = CGFloat(UserDefaults.standard.float(forKey: UserDefaultsIdentifier.screenHeight.rawValue))
+        
+        let itemWidth: CGFloat
+        let itemHeight: CGFloat
+        
+        if screenWidth != 0, screenHeight != 0 {
+            itemWidth = screenWidth
+            itemHeight = screenHeight * 0.2
+        } else {
+            itemWidth = UIScreen.main.bounds.width
+            itemHeight = UIScreen.main.bounds.height * 0.2
+        }
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+        layout.scrollDirection = .horizontal
         
         return layout
     }
@@ -161,9 +196,12 @@ class DetailView: BaseView{
     func setUIData(data: MemoryDB){
         titleLabel.text = data.title
         memoTextView.text = data.memo
+        
+        //DateFormatter
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY.MM.dd"
-        dateLabel.text = formatter.string(from: data.date)
+        formatter.dateFormat = "YYYY.MM.dd. hh:mm"
+        dateLabel.text = formatter.string(from: data.memoryDate)
+        
         setPageController(totalPage: data.imageURL.count)
     }
     
