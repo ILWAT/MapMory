@@ -64,8 +64,6 @@ final class HomeViewController: BaseViewController{
     
     //MARK: - SetNavigation
     override func setNavigation() {
-        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
-        self.title = "내 추억 장소"
     }
     
     //MARK: - Action
@@ -75,7 +73,7 @@ final class HomeViewController: BaseViewController{
     
     //MARK: - Helper
     
-    func checkDeviceAuthorization(){
+    private func checkDeviceAuthorization(){
         DispatchQueue.global().async {
             if CLLocationManager.locationServicesEnabled(){
                 let status: CLAuthorizationStatus = self.locationManager.authorizationStatus
@@ -87,7 +85,7 @@ final class HomeViewController: BaseViewController{
         }
     }
     
-    func checkUserAuthorization(authorization: CLAuthorizationStatus){
+    private func checkUserAuthorization(authorization: CLAuthorizationStatus){
         switch authorization {
         case .notDetermined:
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -144,7 +142,7 @@ final class HomeViewController: BaseViewController{
         
     }
     
-    func setAnnotation(){
+    private func setAnnotation(){
         RealmManager.shared.readAllRecord(type: MemoryDB.self) { results in
             self.memoryData = results
         }
@@ -186,9 +184,14 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
     
     //MARK: - MKMapViewDelegate
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMarkerAnnotationView.identifier, for: annotation) as? MKMarkerAnnotationView else {
-            print("early exit MKMarker upCasting")
-            return MKAnnotationView(annotation: annotation, reuseIdentifier: MKAnnotationView.identifier) }
+        guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMarkerAnnotationView.identifier, for: annotation) as? MKMarkerAnnotationView else { return MKAnnotationView(annotation: annotation, reuseIdentifier: MKAnnotationView.identifier) }
+        
+        //유저의 현재 위치가 어노테이션으로 찍히지 않도록 얼리 엑싯한다.
+        guard !annotation.isKind(of: MKUserLocation.self) else {
+            // Make a fast exit if the annotation is the `MKUserLocation`, as it's not an annotation view we wish to customize.
+            return nil
+        }
+        
         annotationView.canShowCallout = false
         
         annotationView.glyphImage = UIImage(systemName: "star.fill")
@@ -227,11 +230,21 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SummaryCollectionViewCell.identifier, for: indexPath) as? SummaryCollectionViewCell else {return UICollectionViewCell()}
         
-        cell.setCellUI(image: nil, title: displayCellData[indexPath.item].title, location: displayCellData[indexPath.item].address?.addressName ?? "데이터 로드에 실패했습니다.")
+        var image: UIImage? = nil
+        if let imageName = displayCellData[indexPath.item].imageURL.first{
+            image = DocumentFileManager.shared.loadImageFromDocument(fileName: .jpeg(fileName: imageName))
+        }
+        
+        cell.setCellUI(image: image, title: displayCellData[indexPath.item].title, location: displayCellData[indexPath.item].address?.addressName ?? "데이터 로드에 실패했습니다.")
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("didSelectItem")
+        let detailVC = DetailViewController()
+        
+        detailVC.setMemoryData(data: displayCellData[indexPath.item])
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

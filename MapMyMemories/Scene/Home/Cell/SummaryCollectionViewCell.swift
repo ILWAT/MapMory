@@ -48,7 +48,7 @@ final class SummaryCollectionViewCell: BaseCollectionViewCell{
     override func setConstratins() {
         let interItemDefualtSapce = 10
         thumbnailImageView.snp.makeConstraints { make in
-            make.top.bottom.leading.equalToSuperview().inset(interItemDefualtSapce)
+            make.verticalEdges.leading.equalToSuperview().inset(interItemDefualtSapce)
             make.width.equalTo(thumbnailImageView.snp.height)
         }
         titleLabel.snp.makeConstraints { make in
