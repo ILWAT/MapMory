@@ -62,7 +62,7 @@ final class WriteViewController: BaseViewController{
     //MARK: - Action
     @objc func tappedAddImageBtn(_ sender: UIButton){
         var configuration = PHPickerConfiguration()
-        configuration.selectionLimit = 3
+        configuration.selectionLimit = 5
         configuration.filter = .images
         
         let picker = PHPickerViewController(configuration: configuration)
@@ -134,6 +134,12 @@ final class WriteViewController: BaseViewController{
             inputData.emotion.append(EmotionDB(emotion: element, emotionDate: Date()))
         }
         
+        var imageCount = 0
+        images.forEach { image in
+            DocumentFileManager.shared.saveImageToDocument(fileName: ImageFileNameExtension.jpeg(fileName: "\(self.inputData._id)_\(imageCount)"), image: image)
+            inputData.imageURL.insert("\(self.inputData._id)_\(imageCount)")
+            imageCount += 1
+        }
         RealmManager.shared.writeRecord(data: inputData)
         
         self.navigationController?.popViewController(animated: true)
@@ -145,7 +151,6 @@ extension WriteViewController: PHPickerViewControllerDelegate{
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
         images = []
-        
         
         results.forEach { result in
             print(result)
@@ -160,7 +165,7 @@ extension WriteViewController: PHPickerViewControllerDelegate{
                 }
             }
         }
-        
+        print(images)
     }
     
     
@@ -248,6 +253,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
         inputData.address = address
         
         self.mainView.locationTextField.text = self.inputData.address?.placeName
+        
     }
     
     //MARK: - EmojiPickerDelegate
