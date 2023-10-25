@@ -78,12 +78,12 @@ final class WriteViewController: BaseViewController{
             searchVC.delegate = self
             self.navigationController?.pushViewController(searchVC, animated: true)
         }
-        let selectLocation = UIAlertAction(title: "위치 지정하기", style: .default) { action in
-            self.makeToastMessage("아직 준비중인 서비스입니다.")
-        }
+//        let selectLocation = UIAlertAction(title: "위치 지정하기", style: .default) { action in
+//            self.makeToastMessage("아직 준비중인 서비스입니다.")
+//        }
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         
-        [searchLocation, selectLocation, cancel].forEach { element in
+        [searchLocation, cancel].forEach { element in
             alert.addAction(element)
         }
         self.present(alert, animated: true)
