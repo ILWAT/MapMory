@@ -15,7 +15,7 @@ class WriteViewModel{
     
     let dateFormat = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY. MM. dd."
+        formatter.dateFormat = "YYYY. MM. dd. a hh:mm"
         return formatter
     }()
     

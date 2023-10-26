@@ -115,12 +115,10 @@ final class WriteView: BaseView{
         config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer ({ incoming in
             var outgoing = incoming
             outgoing.foregroundColor = UIColor.black
-            outgoing.font = UIFont.boldSystemFont(ofSize: 20)
+            outgoing.font = UIFont.boldSystemFont(ofSize: 18)
             return outgoing
         })
-        let date = Date()
         config.baseBackgroundColor = .mainTintColor
-        config.cornerStyle = .capsule
         button.configuration = config
         return button
     }()
