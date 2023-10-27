@@ -51,6 +51,9 @@
 		DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6A2AE0E9A400933D90 /* DetailView.swift */; };
 		DE95FB6E2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */; };
 		DE95FB702AE1587500933D90 /* CollectionViewTagType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */; };
+		DEA8A4D22AEB2C5000D2794A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = DEA8A4D12AEB2C5000D2794A /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		DEA8A4D42AEB2C5000D2794A /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = DEA8A4D32AEB2C5000D2794A /* FirebaseCrashlytics */; };
+		DEA8A4D72AEB2F7D00D2794A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEA8A4D62AEB2F7D00D2794A /* GoogleService-Info.plist */; };
 		DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216C2AC959DE00B00A26 /* WriteView.swift */; };
 		DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216E2AC959E900B00A26 /* WriteViewController.swift */; };
 		DED7786C2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7786B2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift */; };
@@ -100,6 +103,7 @@
 		DE95FB6A2AE0E9A400933D90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = MapMyMemories/Scene/DetailView.swift; sourceTree = SOURCE_ROOT; };
 		DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTagType.swift; sourceTree = "<group>"; };
+		DEA8A4D62AEB2F7D00D2794A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEBB216C2AC959DE00B00A26 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		DEBB216E2AC959E900B00A26 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		DED7786B2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingEmotionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -117,7 +121,9 @@
 				DE8939542AC1974A0099D1AA /* Realm in Frameworks */,
 				DE8939612AC19A3B0099D1AA /* Toast in Frameworks */,
 				DE8939512AC196DD0099D1AA /* SnapKit in Frameworks */,
+				DEA8A4D42AEB2C5000D2794A /* FirebaseCrashlytics in Frameworks */,
 				4675B0914184588098E10F50 /* Pods_MapMyMemories.framework in Frameworks */,
+				DEA8A4D22AEB2C5000D2794A /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +201,7 @@
 				DE8939582AC197640099D1AA /* Scene */,
 				DE8939572AC1975A0099D1AA /* App */,
 				DE8939492AC1954F0099D1AA /* Info.plist */,
+				DEA8A4D62AEB2F7D00D2794A /* GoogleService-Info.plist */,
 				DE8939642AC19DF20099D1AA /* .gitignore */,
 			);
 			path = MapMyMemories;
@@ -364,6 +371,7 @@
 				DE8939352AC1954D0099D1AA /* Frameworks */,
 				DE8939362AC1954D0099D1AA /* Resources */,
 				B183098CBE28EE39F41217E9 /* [CP] Embed Pods Frameworks */,
+				DEA8A4D52AEB2D4000D2794A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -377,6 +385,8 @@
 				DE89395D2AC19A160099D1AA /* Alamofire */,
 				DE8939602AC19A3B0099D1AA /* Toast */,
 				DE20B88F2AD85DE4006FD060 /* EmojiPicker */,
+				DEA8A4D12AEB2C5000D2794A /* FirebaseAnalyticsWithoutAdIdSupport */,
+				DEA8A4D32AEB2C5000D2794A /* FirebaseCrashlytics */,
 			);
 			productName = MapMyMemories;
 			productReference = DE8939382AC1954D0099D1AA /* MapMyMemories.app */;
@@ -412,6 +422,7 @@
 				DE89395C2AC19A160099D1AA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				DE89395F2AC19A3B0099D1AA /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				DE20B88E2AD85DE4006FD060 /* XCRemoteSwiftPackageReference "EmojiPicker" */,
+				DEA8A4D02AEB2C4F00D2794A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = DE8939392AC1954D0099D1AA /* Products */;
 			projectDirPath = "";
@@ -428,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE8939482AC1954F0099D1AA /* LaunchScreen.storyboard in Resources */,
+				DEA8A4D72AEB2F7D00D2794A /* GoogleService-Info.plist in Resources */,
 				DE8939652AC19DF20099D1AA /* .gitignore in Resources */,
 				DE8939452AC1954F0099D1AA /* Assets.xcassets in Resources */,
 			);
@@ -474,6 +486,28 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MapMyMemories/Pods-MapMyMemories-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		DEA8A4D52AEB2D4000D2794A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -668,6 +702,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = AYG8MBJF93;
 				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -792,6 +827,14 @@
 				minimumVersion = 5.0.1;
 			};
 		};
+		DEA8A4D02AEB2C4F00D2794A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -824,6 +867,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DE89395F2AC19A3B0099D1AA /* XCRemoteSwiftPackageReference "Toast-Swift" */;
 			productName = Toast;
+		};
+		DEA8A4D12AEB2C5000D2794A /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEA8A4D02AEB2C4F00D2794A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		DEA8A4D32AEB2C5000D2794A /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEA8A4D02AEB2C4F00D2794A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
