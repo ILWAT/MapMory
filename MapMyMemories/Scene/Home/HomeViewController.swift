@@ -230,9 +230,9 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SummaryCollectionViewCell.identifier, for: indexPath) as? SummaryCollectionViewCell else {return UICollectionViewCell()}
         
-        var image: UIImage? = nil
+        var image: UIImage? = UIImage(named: "AppSymbol")
         if let imageName = displayCellData[indexPath.item].imageURL.first{
-            image = DocumentFileManager.shared.loadImageFromDocument(fileName: .jpeg(fileName: imageName))
+            image = DocumentFileManager.shared.loadImageFromDocument(fileName: .jpeg(fileName: imageName)) //Realm 저장 이미지중 첫번째 이미지 가져오기
         }
         
         cell.setCellUI(image: image, title: displayCellData[indexPath.item].title, location: displayCellData[indexPath.item].address?.addressName ?? "데이터 로드에 실패했습니다.")
