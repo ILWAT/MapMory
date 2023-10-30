@@ -127,12 +127,16 @@ final class WriteView: BaseView{
         let view = UITextField()
         view.borderStyle = .roundedRect
         view.placeholder = "추억의 제목을 입력해주세요!"
+        view.font = .systemFont(ofSize: 15)
+        view.returnKeyType = .continue
         return view
     }()
     
     let memoTextField = {
         let view = UITextView()
         view.text = ""
+        view.font = .systemFont(ofSize: 15)
+        view.returnKeyType = .done
         return view
     }()
     
