@@ -16,6 +16,7 @@ final class WriteViewController: BaseViewController{
     let inputData = MemoryDB()
     
     let viewModel = WriteViewModel()
+
     
     var images: [UIImage] = []{
         didSet{
@@ -40,6 +41,11 @@ final class WriteViewController: BaseViewController{
         mainView.imageCollectionView.dataSource = self
         mainView.emotionCollectionView.delegate = self
         mainView.emotionCollectionView.dataSource = self
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tappedGesture))
+        gesture.numberOfTapsRequired = 1
+        gesture.isEnabled = true
+        mainView.scrollView.addGestureRecognizer(gesture)
         
         mainView.locationSearchButton.addTarget(self, action: #selector(tappedSearchLocationBtn), for: .touchUpInside)
         mainView.dateButton.addTarget(self, action: #selector(tappedDateBtn), for: .touchUpInside)
@@ -110,6 +116,10 @@ final class WriteViewController: BaseViewController{
         viewController.arrowDirection = .down
         viewController.isDismissedAfterChoosing = true
         present(viewController, animated: true)
+    }
+    
+    @objc func tappedGesture(_ sender: UITapGestureRecognizer){
+        self.mainView.scrollView.endEditing(true)
     }
     
     //MARK: - Helper
