@@ -43,17 +43,20 @@ final class DocumentFileManager{
     }
     
     func loadImageFromDocument(fileName: ImageFileNameExtension) -> UIImage? {
-            //1. 도큐먼트 경로 찾기
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-            //2. 경로 설정(세부 경로, 이미지가 저장되어 있는 위치
+        // 기본 이미지 설정
+        let defaultImage = UIImage(named: "AppSymbol")
+        
+        //1. 도큐먼트 경로 찾기
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return defaultImage }
+        //2. 경로 설정(세부 경로, 이미지가 저장되어 있는 위치
         let fileName = fileName.getFileName
         let fileURL = documentDirectory.appendingPathComponent(fileName)
             
         if FileManager.default.fileExists(atPath: fileURL.path) {
-            return UIImage(contentsOfFile: fileURL.path)!
+            guard let outputImage =  UIImage(contentsOfFile: fileURL.path) else { return defaultImage }
+            return outputImage
         } else {
-            return nil
-            
+            return defaultImage
         }
     }
     

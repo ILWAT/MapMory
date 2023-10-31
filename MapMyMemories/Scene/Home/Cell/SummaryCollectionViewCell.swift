@@ -13,7 +13,6 @@ final class SummaryCollectionViewCell: BaseCollectionViewCell{
     let thumbnailImageView = {
         let view = UIImageView(frame: .zero)
         view.contentMode = .scaleAspectFill
-        view.image = UIImage(systemName: "star.fill")
         view.tintColor = .mainTintColor
         return view
     }()
@@ -63,7 +62,7 @@ final class SummaryCollectionViewCell: BaseCollectionViewCell{
     }
     
     //MARK: - setUI
-    func setCellUI(image: UIImage? = nil, title: String, location: String){
+    func setCellUI(image: UIImage?, title: String, location: String){
         thumbnailImageView.image = image
         titleLabel.text = title
         locationLabel.text = location
