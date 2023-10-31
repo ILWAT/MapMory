@@ -11,7 +11,7 @@ final class DetailViewController: BaseViewController{
     //MARK: - Properties
     private let mainView = DetailView()
     
-    private var data: MemoryDB = MemoryDB()
+    private var data: Memory = Memory()
     
     let viewModel = ViewingImageCollectionViewModel()
     
@@ -38,7 +38,7 @@ final class DetailViewController: BaseViewController{
         self.title = "내 추억 보기"
     }
     
-    func setMemoryData(data: MemoryDB){
+    func setMemoryData(data: Memory){
         self.data = data
         mainView.setUIData(data: data)
     }

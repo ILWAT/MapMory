@@ -193,7 +193,7 @@ class DetailView: BaseView{
         pageControl.numberOfPages = totalPage
     }
     
-    func setUIData(data: MemoryDB){
+    func setUIData(data: Memory){
         titleLabel.text = data.title
         memoTextView.text = data.memo
         

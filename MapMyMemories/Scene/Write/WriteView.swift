@@ -115,12 +115,10 @@ final class WriteView: BaseView{
         config.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer ({ incoming in
             var outgoing = incoming
             outgoing.foregroundColor = UIColor.black
-            outgoing.font = UIFont.boldSystemFont(ofSize: 20)
+            outgoing.font = UIFont.boldSystemFont(ofSize: 18)
             return outgoing
         })
-        let date = Date()
         config.baseBackgroundColor = .mainTintColor
-        config.cornerStyle = .capsule
         button.configuration = config
         return button
     }()
@@ -129,12 +127,16 @@ final class WriteView: BaseView{
         let view = UITextField()
         view.borderStyle = .roundedRect
         view.placeholder = "추억의 제목을 입력해주세요!"
+        view.font = .systemFont(ofSize: 15)
+        view.returnKeyType = .continue
         return view
     }()
     
     let memoTextField = {
         let view = UITextView()
         view.text = ""
+        view.font = .systemFont(ofSize: 15)
+        view.returnKeyType = .done
         return view
     }()
     

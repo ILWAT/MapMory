@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol PassLocation{
+protocol PassLocation: AnyObject{
     func passingLocation(addressData: Document)
 }
 
@@ -28,7 +28,7 @@ class SearchLocationViewController: UITableViewController{
         }
     }
     
-    var delegate: PassLocation?
+    weak var delegate: PassLocation?
     
     
     //MARK: - LifeCycle
@@ -62,12 +62,12 @@ extension SearchLocationViewController: UISearchResultsUpdating{
             return
         }
         
-        apiManager.requestAPI(type: LocationSearchModel.self, api: .kewordSearch(query: text)) { result in
+        apiManager.requestAPI(type: LocationSearchModel.self, api: .kewordSearch(query: text)) { [weak self] result in
             switch result {
             case .success(let success):
-                self.searchResults = success.documents
+                self?.searchResults = success.documents
             case .failure(let failure):
-                self.view.makeToast("네트워크 연결에 실패했습니다.")
+                self?.view.makeToast("네트워크 연결에 실패했습니다.")
                 print(failure)
             }
         }

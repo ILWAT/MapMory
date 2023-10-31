@@ -13,9 +13,11 @@ final class WriteViewController: BaseViewController{
     
     let mainView = WriteView()
     
-    let inputData = MemoryDB()
+    let inputMemory = Memory()
+    var inputAddress = AddressData()
     
     let viewModel = WriteViewModel()
+
     
     var images: [UIImage] = []{
         didSet{
@@ -35,11 +37,18 @@ final class WriteViewController: BaseViewController{
         mainView.dateButton.setTitle(viewModel.dateText.value, for: .normal)
     }
     
+    deinit{ print("WriteView Deinit") }
+    
     override func configure() {
         mainView.imageCollectionView.delegate = self
         mainView.imageCollectionView.dataSource = self
         mainView.emotionCollectionView.delegate = self
         mainView.emotionCollectionView.dataSource = self
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(tappedGesture))
+        gesture.numberOfTapsRequired = 1
+        gesture.isEnabled = true
+        mainView.scrollView.addGestureRecognizer(gesture)
         
         mainView.locationSearchButton.addTarget(self, action: #selector(tappedSearchLocationBtn), for: .touchUpInside)
         mainView.dateButton.addTarget(self, action: #selector(tappedDateBtn), for: .touchUpInside)
@@ -78,12 +87,12 @@ final class WriteViewController: BaseViewController{
             searchVC.delegate = self
             self.navigationController?.pushViewController(searchVC, animated: true)
         }
-        let selectLocation = UIAlertAction(title: "위치 지정하기", style: .default) { action in
-            self.makeToastMessage("아직 준비중인 서비스입니다.")
-        }
+//        let selectLocation = UIAlertAction(title: "위치 지정하기", style: .default) { action in
+//            self.makeToastMessage("아직 준비중인 서비스입니다.")
+//        }
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         
-        [searchLocation, selectLocation, cancel].forEach { element in
+        [searchLocation, cancel].forEach { element in
             alert.addAction(element)
         }
         self.present(alert, animated: true)
@@ -112,35 +121,48 @@ final class WriteViewController: BaseViewController{
         present(viewController, animated: true)
     }
     
+    @objc func tappedGesture(_ sender: UITapGestureRecognizer){
+        self.mainView.scrollView.endEditing(true)
+    }
+    
     //MARK: - Helper
     
     func setInputData(){
         guard let memoryTitle = mainView.titleTextField.text, memoryTitle != "" else {
-            makeToastMessage(errorType: .noneInputText)
+            makeToastMessage(errorType: .noneTitle)
             return }
+        
         guard let memoryMemo = mainView.memoTextField.text, memoryMemo != "" else {
-            makeToastMessage(errorType: .noneInputText)
+            makeToastMessage(errorType: .noneLocation)
             return
         }
-        guard let _ = inputData.address else {
-            makeToastMessage(errorType: .noneInputText)
+        guard inputAddress.lat != 0, inputAddress.long != 0 else {
+            makeToastMessage(errorType: .noneLocation)
             return
         }
         
-        inputData.title = memoryTitle
-        inputData.memo = memoryMemo
-        inputData.memoryDate = viewModel.date.value
+        inputMemory.title = memoryTitle
+        inputMemory.memo = memoryMemo
+        inputMemory.memoryDate = viewModel.date.value
         for element in emotion{
-            inputData.emotion.append(EmotionDB(emotion: element, emotionDate: Date()))
+            inputMemory.emotion.append(EmotionDB(emotion: element, emotionDate: Date()))
         }
         
         var imageCount = 0
         images.forEach { image in
-            DocumentFileManager.shared.saveImageToDocument(fileName: ImageFileNameExtension.jpeg(fileName: "\(self.inputData._id)_\(imageCount)"), image: image)
-            inputData.imageURL.insert("\(self.inputData._id)_\(imageCount)")
+            DocumentFileManager.shared.saveImageToDocument(fileName: ImageFileNameExtension.jpeg(fileName: "\(self.inputMemory.hashValue)_\(imageCount)"), image: image)
+            inputMemory.imageURL.insert("\(self.inputMemory.hashValue)_\(imageCount)")
             imageCount += 1
         }
-        RealmManager.shared.writeRecord(data: inputData)
+        
+        if let existsData = RealmManager.shared.isExistLocation(data: inputAddress){
+            RealmManager.shared.upsertMemory(addressData: existsData, memoryData: inputMemory)
+        } else {
+            inputAddress.memory.append(inputMemory)
+            RealmManager.shared.writeRecord(data: inputAddress)
+        }
+        
+        
         
         self.navigationController?.popViewController(animated: true)
     }
@@ -248,11 +270,12 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
             return
         }
         
-        let address = AddressData(addressName: addressData.addressName, lat: lat, long: long, placeName: addressData.placeName)
+        inputAddress = AddressData(lat: lat, long: long, memory: [])
         
-        inputData.address = address
+        inputMemory.addressName = addressData.addressName
+        inputMemory.placeName =  addressData.placeName
         
-        self.mainView.locationTextField.text = self.inputData.address?.placeName
+        self.mainView.locationTextField.text = self.inputMemory.placeName
         
     }
     
