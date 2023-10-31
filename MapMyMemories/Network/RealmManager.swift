@@ -27,15 +27,28 @@ final class RealmManager{
     
     ///해당 제네릭 형태의 테이블에 레코드를 삽입한다.
     func writeRecord<T: Object>(data: T) {
-        do { try realm.write { realm.add(data)}
-        } catch { 
-            
-            print(error) }
+        do { try realm.write { realm.add(data) }
+        } catch { print(error) }
     }
     
     func deleteRecord<T: Object>(data: T){
         do { try realm.write { realm.delete(data)}
         } catch { print(error) }
+    }
+    
+    func isExistLocation(data: AddressData) -> AddressData?{
+        let isExist = realm.object(ofType: AddressData.self, forPrimaryKey: data.coordiante)
+        
+        return isExist
+    }
+    
+    func upsertMemory(addressData: AddressData, memoryData: Memory){
+        do{
+            try realm.write({
+                addressData.memory.append(memoryData)
+            })
+        }
+        catch { print (error) }
     }
     
     

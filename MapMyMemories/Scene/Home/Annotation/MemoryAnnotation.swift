@@ -6,15 +6,16 @@
 //
 
 import MapKit
+import RealmSwift
 
 
 class MemoryAnnotation: NSObject, MKAnnotation{
     
     @objc dynamic var coordinate: CLLocationCoordinate2D
     
-    var memoryData: MemoryDB
+    var memoryData: List<Memory>
     
-    init(coordinate: CLLocationCoordinate2D, memoryData: MemoryDB = MemoryDB()) {
+    init(coordinate: CLLocationCoordinate2D, memoryData: List<Memory>) {
         self.coordinate = coordinate
         self.memoryData = memoryData
     }

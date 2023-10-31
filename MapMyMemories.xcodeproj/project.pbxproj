@@ -33,7 +33,7 @@
 		DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89396E2AC320C60099D1AA /* BaseMapView.swift */; };
 		DE8939722AC324940099D1AA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939712AC324940099D1AA /* HomeViewController.swift */; };
 		DE8939742AC326540099D1AA /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939732AC326540099D1AA /* BaseView.swift */; };
-		DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939862AC499A00099D1AA /* MemoryDB.swift */; };
+		DE8939872AC499A00099D1AA /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939862AC499A00099D1AA /* Memory.swift */; };
 		DE8939892AC4A4DB0099D1AA /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939882AC4A4DA0099D1AA /* RealmManager.swift */; };
 		DE8939912AC860C00099D1AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939902AC860C00099D1AA /* HomeView.swift */; };
 		DE8939932AC8617A0099D1AA /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939922AC8617A0099D1AA /* AppViewController.swift */; };
@@ -85,7 +85,7 @@
 		DE89396E2AC320C60099D1AA /* BaseMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapView.swift; sourceTree = "<group>"; };
 		DE8939712AC324940099D1AA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DE8939732AC326540099D1AA /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		DE8939862AC499A00099D1AA /* MemoryDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryDB.swift; path = MapMyMemories/MemoryDB.swift; sourceTree = SOURCE_ROOT; };
+		DE8939862AC499A00099D1AA /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Memory.swift; path = MapMyMemories/Memory.swift; sourceTree = SOURCE_ROOT; };
 		DE8939882AC4A4DA0099D1AA /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		DE8939902AC860C00099D1AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DE8939922AC8617A0099D1AA /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 		DE8939592AC1976B0099D1AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE8939862AC499A00099D1AA /* MemoryDB.swift */,
+				DE8939862AC499A00099D1AA /* Memory.swift */,
 				DE90B5202AD3421800B6A694 /* SearchLocationModel.swift */,
 			);
 			path = Model;
@@ -550,7 +550,7 @@
 				DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */,
 				DE843D662ADEC64B008E065D /* BaseCollectionViewCell.swift in Sources */,
 				DE8939912AC860C00099D1AA /* HomeView.swift in Sources */,
-				DE8939872AC499A00099D1AA /* MemoryDB.swift in Sources */,
+				DE8939872AC499A00099D1AA /* Memory.swift in Sources */,
 				DE90B51D2AD3260800B6A694 /* SearchLocationViewController.swift in Sources */,
 				DE89396B2AC1B1F80099D1AA /* BaseViewController.swift in Sources */,
 				DE8939952AC8989F0099D1AA /* Extension+UIView.swift in Sources */,
