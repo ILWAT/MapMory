@@ -19,9 +19,9 @@ final class HomeViewController: BaseViewController{
     
     let locationManager: CLLocationManager = CLLocationManager()
     
-    var memoryData: Results<MemoryDB>?
-    
-    var displayCellData: [MemoryDB] = []{
+    var addressData: Results<AddressData>?
+//    [Memory]
+    var displayCellData:List<Memory> = List<Memory>(){
         didSet{
             mainView.collectionView.reloadData()
         }
@@ -143,19 +143,18 @@ final class HomeViewController: BaseViewController{
     }
     
     private func setAnnotation(){
-        RealmManager.shared.readAllRecord(type: MemoryDB.self) { results in
-            self.memoryData = results
+        RealmManager.shared.readAllRecord(type: AddressData.self) { results in
+            self.addressData = results
         }
-        guard let memoryData else {
+        guard let addressData else {
             print("none MemoryData")
             return}
         
-        for element in memoryData{
-            guard let lat = element.address?.lat, let long = element.address?.long else {  
-                print("failed load Address")
-                return }
+        for element in addressData{
+            let lat = element.lat
+            let long = element.long
             
-            let annotation = MemoryAnnotation(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), memoryData: element)
+            let annotation = MemoryAnnotation(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), memoryData: element.memory)
     
             mainView.mapView.addAnnotation(annotation)
         }
@@ -204,14 +203,16 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
             print("early exit Annotation")
             return }
         
-        if let lat = annotation.memoryData.address?.lat, let long = annotation.memoryData.address?.long {
-            mainView.mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: long), latitudinalMeters: 500, longitudinalMeters: 500), animated: true)
-        }
+        let lat = annotation.coordinate.latitude
+        let long = annotation.coordinate.longitude
+        mainView.mapView.setRegion(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: long), latitudinalMeters: 500, longitudinalMeters: 500), animated: true)
+            
+        
        
         
         //클릭시 간략한 정보를 보이기
         mainView.collectionView.isHidden = false
-        displayCellData = [annotation.memoryData]
+        displayCellData = annotation.memoryData
         
     }
     
@@ -235,7 +236,7 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
             image = DocumentFileManager.shared.loadImageFromDocument(fileName: .jpeg(fileName: imageName)) //Realm 저장 이미지중 첫번째 이미지 가져오기
         }
         
-        cell.setCellUI(image: image, title: displayCellData[indexPath.item].title, location: displayCellData[indexPath.item].address?.addressName ?? "데이터 로드에 실패했습니다.")
+        cell.setCellUI(image: image, title: displayCellData[indexPath.item].title, location: displayCellData[indexPath.item].addressName)
         return cell
     }
     
