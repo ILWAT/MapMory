@@ -21,7 +21,6 @@ class DetailView: BaseView{
     
     let subScrollView = {
         let view = UIScrollView(frame: .zero)
-        view.backgroundColor = .mainBackgroundColor
         view.layer.cornerRadius = 10
         view.backgroundColor = .mainBackgroundColor
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]

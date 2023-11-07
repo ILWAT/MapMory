@@ -39,7 +39,7 @@ final class SummaryCollectionViewCell: BaseCollectionViewCell{
         self.layer.cornerRadius = 10
         self.clipsToBounds = true
         
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .mainBackgroundColor
         contentView.addSubViews([thumbnailImageView, titleLabel, locationLabel])
     }
     
