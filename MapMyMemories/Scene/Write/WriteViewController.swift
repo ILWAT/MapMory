@@ -58,7 +58,7 @@ final class WriteViewController: BaseViewController{
     override func setNavigation() {
         self.title = "추억 기록 하기"
         let completButton = UIBarButtonItem(title: "저장", style: .done, target: self, action: #selector(tappedSaveBtn))
-        completButton.tintColor = .black
+        completButton.tintColor = .label
         self.navigationItem.setRightBarButtonItems([completButton], animated: true)
     }
     
