@@ -72,7 +72,11 @@ class DetailView: BaseView{
     
     let pageControl = {
         let controller = UIPageControl(frame: .zero)
-        controller.direction = .leftToRight
+        if #available(iOS 16.0, *) {
+            controller.direction = .leftToRight
+        } else {
+            // Fallback on earlier versions
+        }
         return controller
     }()
     

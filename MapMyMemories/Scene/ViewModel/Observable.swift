@@ -10,7 +10,7 @@ import Foundation
 class Observable<T>{
     private var notifier: ((T)->Void)?
     
-    var value: T{
+    var value: T {
         didSet{
             notifier?(value)
         }
