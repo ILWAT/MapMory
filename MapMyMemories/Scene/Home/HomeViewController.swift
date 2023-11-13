@@ -20,8 +20,8 @@ final class HomeViewController: BaseViewController{
     let locationManager: CLLocationManager = CLLocationManager()
     
     var addressData: Results<AddressData>?
-//    [Memory]
-    var displayCellData:List<Memory> = List<Memory>(){
+    
+    var selectedAnnotation:AddressData = AddressData(){
         didSet{
             mainView.collectionView.reloadData()
         }
@@ -143,18 +143,19 @@ final class HomeViewController: BaseViewController{
     }
     
     private func setAnnotation(){
+        mainView.mapView.removeAnnotations(mainView.mapView.annotations)
+        
         RealmManager.shared.readAllRecord(type: AddressData.self) { results in
             self.addressData = results
         }
+        
         guard let addressData else {
             print("none MemoryData")
-            return}
+            return
+        }
         
         for element in addressData{
-            let lat = element.lat
-            let long = element.long
-            
-            let annotation = MemoryAnnotation(coordinate: CLLocationCoordinate2D(latitude: lat, longitude: long), memoryData: element.memory)
+            let annotation = MemoryAnnotation(addressData: element)
     
             mainView.mapView.addAnnotation(annotation)
         }
@@ -212,7 +213,7 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
         
         //클릭시 간략한 정보를 보이기
         mainView.collectionView.isHidden = false
-        displayCellData = annotation.memoryData
+        selectedAnnotation = annotation.addressData
         
     }
     
@@ -225,18 +226,18 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
 //    }
     //MARK: - CollectionView Delegate & DataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return displayCellData.count
+        return selectedAnnotation.memory.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SummaryCollectionViewCell.identifier, for: indexPath) as? SummaryCollectionViewCell else {return UICollectionViewCell()}
         
         var image: UIImage? = UIImage(named: "AppSymbol")
-        if let imageName = displayCellData[indexPath.item].imageURL.first{
+        if let imageName = selectedAnnotation.memory[indexPath.item].imageURL.first{
             image = DocumentFileManager.shared.loadImageFromDocument(fileName: .jpeg(fileName: imageName)) //Realm 저장 이미지중 첫번째 이미지 가져오기
         }
         
-        cell.setCellUI(image: image, title: displayCellData[indexPath.item].title, location: displayCellData[indexPath.item].addressName)
+        cell.setCellUI(image: image, title: selectedAnnotation.memory[indexPath.item].title, location: selectedAnnotation.memory[indexPath.item].addressName)
         return cell
     }
     
@@ -244,7 +245,8 @@ extension HomeViewController: CLLocationManagerDelegate, MKMapViewDelegate, UICo
         print("didSelectItem")
         let detailVC = DetailViewController()
         
-        detailVC.setMemoryData(data: displayCellData[indexPath.item])
+        detailVC.setMemoryData(data: selectedAnnotation.memory[indexPath.item], memoryIndex: indexPath.item, addressPrimaryKey: selectedAnnotation.coordiante)
+//        detailVC.removeAnnotationDelegate = self
         
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
