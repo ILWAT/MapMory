@@ -17,19 +17,6 @@ final class WriteViewController: BaseViewController{
     var inputAddress = AddressData()
     
     let viewModel = WriteViewModel()
-
-    
-    var images: [UIImage] = []{
-        didSet{
-            mainView.imageCollectionView.reloadData()
-        }
-    }
-    
-    var emotion: [String] = []{
-        didSet{
-            mainView.emotionCollectionView.reloadData()
-        }
-    }
     
     //MARK: - LifeCycle
     override func loadView() {
@@ -40,10 +27,10 @@ final class WriteViewController: BaseViewController{
     deinit{ print("WriteView Deinit") }
     
     override func configure() {
-        mainView.imageCollectionView.delegate = self
-        mainView.imageCollectionView.dataSource = self
-        mainView.emotionCollectionView.delegate = self
-        mainView.emotionCollectionView.dataSource = self
+        [mainView.imageCollectionView, mainView.emotionCollectionView].forEach { view in
+            view.delegate = self
+            view.dataSource = self
+        }
         
         let gesture = UITapGestureRecognizer(target: self, action: #selector(tappedGesture))
         gesture.numberOfTapsRequired = 1
@@ -52,6 +39,9 @@ final class WriteViewController: BaseViewController{
         
         mainView.locationSearchButton.addTarget(self, action: #selector(tappedSearchLocationBtn), for: .touchUpInside)
         mainView.dateButton.addTarget(self, action: #selector(tappedDateBtn), for: .touchUpInside)
+        mainView.titleTextField.addTarget(self, action: #selector(titleTextFieldValueChagned), for: .editingChanged)
+        mainView.memoTextField.delegate = self
+        
         setBind()
     }
     
@@ -65,6 +55,24 @@ final class WriteViewController: BaseViewController{
     func setBind(){
         viewModel.dateText.bind { string in
             self.mainView.dateButton.setTitle(string, for: .normal)
+        }
+        
+        viewModel.images.bind { images in
+            self.mainView.imageCollectionView.reloadData()
+        }
+        
+        viewModel.emotion.bind { emotion in
+            self.mainView.emotionCollectionView.reloadData()
+        }
+        
+        viewModel.titleString.bind { string in
+            print(string)
+            self.mainView.titleTextField.text = string
+        }
+        
+        viewModel.memoString.bind { string in
+            print(string)
+            self.mainView.memoTextField.text = string
         }
     }
     
@@ -125,18 +133,29 @@ final class WriteViewController: BaseViewController{
         self.mainView.scrollView.endEditing(true)
     }
     
+    @objc func titleTextFieldValueChagned(_ sender: UITextField){
+        viewModel.titleString.value = sender.text
+    }
+    
+    @objc func memoTextValueChanged(_ sender: UITextView){
+        viewModel.memoString.value = sender.text
+    }
+    
     //MARK: - Helper
     
     func setInputData(){
-        guard let memoryTitle = mainView.titleTextField.text, memoryTitle != "" else {
+        guard let memoryTitle = viewModel.checkTextValidation(textType: .title) else {
+            self.mainView.titleTextField.resignFirstResponder()
             makeToastMessage(errorType: .noneTitle)
             return }
         
-        guard let memoryMemo = mainView.memoTextField.text, memoryMemo != "" else {
+        guard let memoryMemo = viewModel.checkTextValidation(textType: .memo) else {
+            self.mainView.memoTextField.resignFirstResponder()
             makeToastMessage(errorType: .noneLocation)
             return
         }
         guard inputAddress.lat != 0, inputAddress.long != 0 else {
+            self.mainView.scrollView.endEditing(true)
             makeToastMessage(errorType: .noneLocation)
             return
         }
@@ -144,12 +163,12 @@ final class WriteViewController: BaseViewController{
         inputMemory.title = memoryTitle
         inputMemory.memo = memoryMemo
         inputMemory.memoryDate = viewModel.date.value
-        for element in emotion{
+        for element in viewModel.emotion.value{
             inputMemory.emotion.append(EmotionDB(emotion: element, emotionDate: Date()))
         }
         
         var imageCount = 0
-        images.forEach { image in
+        viewModel.images.value.forEach { image in
             DocumentFileManager.shared.saveImageToDocument(fileName: ImageFileNameExtension.jpeg(fileName: "\(self.inputMemory.hashValue)_\(imageCount)"), image: image)
             inputMemory.imageURL.insert("\(self.inputMemory.hashValue)_\(imageCount)")
             imageCount += 1
@@ -172,7 +191,7 @@ final class WriteViewController: BaseViewController{
 extension WriteViewController: PHPickerViewControllerDelegate{
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
-        images = []
+        viewModel.images.value = []
         
         results.forEach { result in
             print(result)
@@ -181,29 +200,29 @@ extension WriteViewController: PHPickerViewControllerDelegate{
                 itemProvider.loadObject(ofClass: UIImage.self) { image, error in
                     if let selectedImage = image as? UIImage{
                         DispatchQueue.main.async {
-                            self.images.append(selectedImage)
+                            self.viewModel.images.value.append(selectedImage)
                         }
                     }
                 }
             }
         }
-        print(images)
+        print(viewModel.images)
     }
     
     
 }
 
 
-extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSource, PassLocation, EmojiPickerDelegate{
+extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSource, PassLocation, EmojiPickerDelegate, UITextViewDelegate{
     //MARK: - CollectionViewDelegate & DataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.tag{
         case CollectionViewTagType.image.rawValue:
-            return images.count + 1
+            return viewModel.images.value.count + 1
             
         case CollectionViewTagType.emotion.rawValue:
-            return emotion.count + 1
+            return viewModel.emotion.value.count + 1
             
         default:
             return 0
@@ -221,7 +240,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 cell.addImageButton.isHidden = false
                 cell.imageView.image = nil
             } else {
-                cell.imageView.image = images[indexPath.item-1]
+                cell.imageView.image = viewModel.images.value[indexPath.item-1]
                 cell.addImageButton.isHidden = true
             }
             
@@ -237,7 +256,7 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
                 cell.emotionLabel.text = nil
                 cell.deleteButton.isHidden = true
             } else {
-                cell.emotionLabel.text = emotion[indexPath.item-1]
+                cell.emotionLabel.text = viewModel.emotion.value[indexPath.item-1]
                 cell.addEmotionButton.isHidden = true
                 cell.deleteButton.isHidden = false
             }
@@ -281,7 +300,13 @@ extension WriteViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     //MARK: - EmojiPickerDelegate
     func didGetEmoji(emoji: String) {
-        self.emotion.append(emoji)
+        self.viewModel.emotion.value.append(emoji)
+    }
+    
+    //MARK: - textViewDelegate
+    func textViewDidChange(_ textView: UITextView) {
+        print("setTextView")
+        viewModel.memoString.value = textView.text
     }
     
 }
