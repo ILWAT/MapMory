@@ -14,7 +14,7 @@ enum ToastMessageType{
     case failedloadLocation
     case failedSaveImageDocument
     case failedRealmInit
-    
+    case failedDeleteRealm
     
     var getMessage: String{
         switch self {
@@ -30,6 +30,8 @@ enum ToastMessageType{
             return "위치를 지정해주세요."
         case .failedRealmInit:
             return "앱 초기 오류가 발생했습니다.\n 앱 종료후 다시 실행해주세요."
+        case .failedDeleteRealm:
+            return "삭제중 오류가 발생했습니다.\n 다시 실행해주세요."
         }
     }
     

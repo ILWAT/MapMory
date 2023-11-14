@@ -31,7 +31,6 @@ final class WriteView: BaseView{
         let label = UILabel()
         label.text = "사진"
         label.font = .boldSystemFont(ofSize: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -39,7 +38,6 @@ final class WriteView: BaseView{
         let label = UILabel()
         label.text = "위치"
         label.font = .boldSystemFont(ofSize: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -47,7 +45,6 @@ final class WriteView: BaseView{
         let label = UILabel()
         label.text = "날짜"
         label.font = .boldSystemFont(ofSize: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -55,7 +52,6 @@ final class WriteView: BaseView{
         let label = UILabel()
         label.text = "제목"
         label.font = .boldSystemFont(ofSize: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -63,7 +59,6 @@ final class WriteView: BaseView{
         let label = UILabel()
         label.text = "감정"
         label.font = .boldSystemFont(ofSize: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -71,7 +66,6 @@ final class WriteView: BaseView{
         let label = UILabel()
         label.text = "내용"
         label.font = .boldSystemFont(ofSize: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -79,7 +73,6 @@ final class WriteView: BaseView{
         let label = UILabel()
         label.text = "사진"
         label.font = .boldSystemFont(ofSize: 17)
-        label.textColor = .black
         return label
     }()
     
@@ -101,9 +94,10 @@ final class WriteView: BaseView{
     
     let locationSearchButton = {
         let button = UIButton()
-        var config = UIButton.Configuration.plain()
+        var config = UIButton.Configuration.filled()
         config.image = UIImage(systemName: "magnifyingglass")
-        config.baseForegroundColor = .mainTintColor
+        config.baseBackgroundColor = .mainTintColor
+        config.baseForegroundColor = .black
         button.configuration = config
         return button
     }()
@@ -137,6 +131,9 @@ final class WriteView: BaseView{
         view.text = ""
         view.font = .systemFont(ofSize: 15)
         view.returnKeyType = .done
+        view.layer.borderColor = UIColor.systemGray5.cgColor
+        view.layer.cornerRadius = 10
+        view.layer.borderWidth = 1
         return view
     }()
     

@@ -25,15 +25,54 @@ final class RealmManager{
         completionHandler(realm.objects(T.self))
     }
     
+    func readSpecificRecord<T:Object>(type: T.Type, pk: String) -> T? {
+        return realm.object(ofType: T.self, forPrimaryKey: pk)
+    }
+    
     ///해당 제네릭 형태의 테이블에 레코드를 삽입한다.
     func writeRecord<T: Object>(data: T) {
         do { try realm.write { realm.add(data) }
         } catch { print(error) }
     }
     
-    func deleteRecord<T: Object>(data: T){
-        do { try realm.write { realm.delete(data)}
-        } catch { print(error) }
+    func deleteRecord<T: Object>(data: T) -> Bool{
+        do { 
+            try realm.write { realm.delete(data) }
+            return true
+        } catch {
+            print(error)
+            return false
+        }
+    }
+    
+    func deleteEmbeddedListRecord(address: AddressData, memoryIndex: Int) -> Bool{
+        do {
+            address.memory[memoryIndex].imageURL.forEach { imageURLs in
+                _ = DocumentFileManager.shared.removeImageFromDocument(fileName: .jpeg(fileName: imageURLs))
+            }
+            
+            try realm.write {
+                address.memory[memoryIndex].emotion.removeAll()
+                
+                if address.memory.count == 1{
+                    realm.delete(address)
+                } else {
+                    address.memory.remove(at: memoryIndex)
+                    print(address.memory)
+                }
+            }
+            
+            return true
+        } catch {
+            print(error)
+            return false
+        }
+        
+    }
+    
+    func updateMemoryRecord(data: AddressData, modifiedData: Memory, index: Int){
+        do{ try realm.write { data.memory[index] = modifiedData } }
+        catch { print(error) }
     }
     
     func isExistLocation(data: AddressData) -> AddressData?{

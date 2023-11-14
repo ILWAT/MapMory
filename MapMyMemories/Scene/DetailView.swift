@@ -21,7 +21,6 @@ class DetailView: BaseView{
     
     let subScrollView = {
         let view = UIScrollView(frame: .zero)
-        view.backgroundColor = .mainBackgroundColor
         view.layer.cornerRadius = 10
         view.backgroundColor = .mainBackgroundColor
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -73,7 +72,11 @@ class DetailView: BaseView{
     
     let pageControl = {
         let controller = UIPageControl(frame: .zero)
-        controller.direction = .leftToRight
+        if #available(iOS 16.0, *) {
+            controller.direction = .leftToRight
+        } else {
+            // Fallback on earlier versions
+        }
         return controller
     }()
     
