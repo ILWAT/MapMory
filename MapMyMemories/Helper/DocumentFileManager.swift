@@ -53,7 +53,7 @@ final class DocumentFileManager{
         let fileURL = documentDirectory.appendingPathComponent(fileName)
             
         if FileManager.default.fileExists(atPath: fileURL.path) {
-            guard let outputImage =  UIImage(contentsOfFile: fileURL.path) else { return defaultImage }
+            guard let outputImage = UIImage(contentsOfFile: fileURL.path) else { return nil }
             return outputImage
         } else {
             return defaultImage
@@ -61,9 +61,9 @@ final class DocumentFileManager{
     }
     
     ///도큐먼트에 있는 파일을 삭제한다.
-    func removeImageFromDocument(fileName: ImageFileNameExtension){
+    func removeImageFromDocument(fileName: ImageFileNameExtension) -> Bool {
         //1. 도큐먼트 경로 찾기
-        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return false }
         //2. 경로 설정(세부 경로, 이미지가 저장되어 있는 위치)
         let fileName = fileName.getFileName
         
@@ -71,8 +71,10 @@ final class DocumentFileManager{
         
         do{
             try FileManager.default.removeItem(at: fileURL)
+            return true
         } catch let error{
             print("File remove error",error)
+            return false
         }
     }
     
