@@ -12,6 +12,8 @@ final class DetailViewController: BaseViewController{
     private let mainView = DetailView()
     
     private var data: Memory = Memory()
+    private var memoryIndex: Int = 0
+    private var addressPK: String = ""
     
     let viewModel = ViewingImageCollectionViewModel()
     
@@ -36,10 +38,19 @@ final class DetailViewController: BaseViewController{
     //MARK: - setNavigation
     override func setNavigation() {
         self.title = "내 추억 보기"
+        
+        let deleteBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(tappedDeleteBarButtonItem))
+        deleteBarButtonItem.tintColor = .label
+        let modifyBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .plain, target: self, action: #selector(tappedModifyBarButtonItem))
+        modifyBarButtonItem.tintColor = .label
+        
+        self.navigationItem.setRightBarButtonItems([deleteBarButtonItem], animated: true)
     }
     
-    func setMemoryData(data: Memory){
+    func setMemoryData(data: Memory, memoryIndex: Int, addressPrimaryKey: String){
         self.data = data
+        self.memoryIndex = memoryIndex
+        self.addressPK = addressPrimaryKey
         mainView.setUIData(data: data)
     }
     
@@ -52,6 +63,30 @@ final class DetailViewController: BaseViewController{
         default:
             viewModel.imageContentMode.value = .scaleAspectFill
         }
+    }
+    
+    @objc func tappedDeleteBarButtonItem(_ sender: UIBarButtonItem){
+        let alert = UIAlertController(title: "추억 삭제", message: "추억을 정말로 삭제하시겠습니까?\n한번 삭제한 추억은 다시 되돌릴 수 없습니다!!", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "삭제", style: .default) { action in
+            print("ok")
+            guard let addressData = RealmManager.shared.readSpecificRecord(type: AddressData.self, pk: self.addressPK) else {return}
+            guard RealmManager.shared.deleteEmbeddedListRecord(address: addressData, memoryIndex: self.memoryIndex) else {
+                self.makeToastMessage(errorType: .failedDeleteRealm)
+                return
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel)
+        [ok, cancel].forEach { action in
+            alert.addAction(action)
+        }
+        self.present(alert, animated: true)
+    }
+    
+    @objc func tappedModifyBarButtonItem(_ sender: UIBarButtonItem) {
+        let modifyVC = WriteViewController()
+        self.navigationController?.pushViewController(modifyVC, animated: true)
+        modifyVC.viewModel.setViewModel(data: data)
     }
     
     

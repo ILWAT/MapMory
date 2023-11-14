@@ -21,7 +21,7 @@ final class ImageCollectionViewCell: BaseCollectionViewCell{
         let button = UIButton()
         var configure = UIButton.Configuration.plain()
         configure.image = UIImage(systemName: "plus")
-        configure.baseForegroundColor = .black
+        configure.baseForegroundColor = .label
         configure.imagePlacement = .top
         button.layer.borderColor = UIColor.mainTintColor?.cgColor
         button.clipsToBounds = true

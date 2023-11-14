@@ -13,11 +13,11 @@ class MemoryAnnotation: NSObject, MKAnnotation{
     
     @objc dynamic var coordinate: CLLocationCoordinate2D
     
-    var memoryData: List<Memory>
+    var addressData: AddressData
     
-    init(coordinate: CLLocationCoordinate2D, memoryData: List<Memory>) {
-        self.coordinate = coordinate
-        self.memoryData = memoryData
+    init(addressData: AddressData) {
+        self.addressData = addressData
+        self.coordinate = CLLocationCoordinate2D(latitude: addressData.lat, longitude: addressData.long)
     }
     
 }
