@@ -29,7 +29,6 @@
 		DE89395E2AC19A160099D1AA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DE89395D2AC19A160099D1AA /* Alamofire */; };
 		DE8939612AC19A3B0099D1AA /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = DE8939602AC19A3B0099D1AA /* Toast */; };
 		DE8939632AC19CB50099D1AA /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939622AC19CB50099D1AA /* Extension+UIColor.swift */; };
-		DE8939652AC19DF20099D1AA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DE8939642AC19DF20099D1AA /* .gitignore */; };
 		DE8939672AC19E6A0099D1AA /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8939662AC19E6A0099D1AA /* APIKeys.swift */; };
 		DE89396B2AC1B1F80099D1AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89396A2AC1B1F80099D1AA /* BaseViewController.swift */; };
 		DE89396F2AC320C60099D1AA /* BaseMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89396E2AC320C60099D1AA /* BaseMapView.swift */; };
@@ -83,7 +82,6 @@
 		DE8939472AC1954F0099D1AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE8939492AC1954F0099D1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DE8939622AC19CB50099D1AA /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
-		DE8939642AC19DF20099D1AA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DE8939662AC19E6A0099D1AA /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		DE89396A2AC1B1F80099D1AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DE89396E2AC320C60099D1AA /* BaseMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMapView.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 				DE8939572AC1975A0099D1AA /* App */,
 				DE8939492AC1954F0099D1AA /* Info.plist */,
 				DE8089E12B0388F100150777 /* GoogleService-Info.plist */,
-				DE8939642AC19DF20099D1AA /* .gitignore */,
 			);
 			path = MapMyMemories;
 			sourceTree = "<group>";
@@ -448,7 +445,6 @@
 			files = (
 				DE8939482AC1954F0099D1AA /* LaunchScreen.storyboard in Resources */,
 				DE8089E22B0388F100150777 /* GoogleService-Info.plist in Resources */,
-				DE8939652AC19DF20099D1AA /* .gitignore in Resources */,
 				DE8939452AC1954F0099D1AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
