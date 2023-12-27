@@ -12,14 +12,20 @@
 ***개발기간***
 > ver. 1.0 개발 기간: 2023.09.23. ~ 11.02.
 >> 출시 및 업데이트: 2023.11.02. ~ 현재
-
+---------
 ***⚙️기술스택***
 - `UIKit`, `MapKit`
 - `SnapKit`, `Toast`
 - `RealmSwift`
 - `Alamofire`
 - `FireBase Crashlytics`
-
+----------
+***개발간 집중사항***
+- Git
+  - 이슈 발행   
+    <img src="https://github.com/ILWAT/MapMory/assets/87518434/fc2d81b6-1305-49d5-8b93-a6beb7a0a541" width="50%" height="50%"></img>
+  - branch 분기 및 pull request   
+    <img width="416" alt="스크린샷 2023-12-27 오후 11 45 00" src="https://github.com/ILWAT/MapMory/assets/87518434/9ecda56a-fd7f-4e77-a766-eeafa03d8ae0"><img src="https://github.com/ILWAT/MapMory/assets/87518434/1b4767d8-6ff0-4ae8-9113-6251840732bd" width="50%" height="50%"></img>
 
 ## 커밋 컨벤션
 |제목|내용|
