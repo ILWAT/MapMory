@@ -20,7 +20,7 @@
 - `Alamofire`
 - `FireBase Crashlytics`
 ----------
-***개발간 집중사항***
+***개발간 중점사항***
 - Git
   - 이슈 발행   
     <img src="https://github.com/ILWAT/MapMory/assets/87518434/fc2d81b6-1305-49d5-8b93-a6beb7a0a541" width="50%" height="50%"></img>
