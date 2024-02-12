@@ -29,9 +29,10 @@
 ***개발간 중점사항***
 - Git
   - 이슈 발행   
-    <img src="https://github.com/ILWAT/MapMory/assets/87518434/fc2d81b6-1305-49d5-8b93-a6beb7a0a541" width="50%" height="50%"></img>
+    [***⚠️발행 이슈***](https://github.com/ILWAT/MapMory/issues)
   - branch 분기 및 pull request   
-    <img width="416" alt="스크린샷 2023-12-27 오후 11 45 00" src="https://github.com/ILWAT/MapMory/assets/87518434/9ecda56a-fd7f-4e77-a766-eeafa03d8ae0" align="center"><img src="https://github.com/ILWAT/MapMory/assets/87518434/1b4767d8-6ff0-4ae8-9113-6251840732bd" width="50%" height="50%" align="center"></img>
+    <img width="416" alt="스크린샷 2023-12-27 오후 11 45 00" src="https://github.com/ILWAT/MapMory/assets/87518434/9ecda56a-fd7f-4e77-a766-eeafa03d8ae0" align="center">   
+    [***✅Pull Requests***](https://github.com/ILWAT/MapMory/pulls?q=is%3Aopen+is%3Apr)
 
 ## 커밋 컨벤션
 |제목|내용|
