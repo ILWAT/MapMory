@@ -16,7 +16,6 @@
 		DE43BD3E2ACE8A5500FD81DD /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */; };
 		DE6D2AFE2ADDD34A00694CB0 /* MemoryAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6D2AFD2ADDD34A00694CB0 /* MemoryAnnotation.swift */; };
 		DE73165E2B025FCC00F20E8D /* DataControlError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE73165D2B025FCC00F20E8D /* DataControlError.swift */; };
-		DE8089E22B0388F100150777 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE8089E12B0388F100150777 /* GoogleService-Info.plist */; };
 		DE843D642ADEC5C4008E065D /* SummaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843D632ADEC5C4008E065D /* SummaryCollectionViewCell.swift */; };
 		DE843D662ADEC64B008E065D /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE843D652ADEC64B008E065D /* BaseCollectionViewCell.swift */; };
 		DE89393C2AC1954D0099D1AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89393B2AC1954D0099D1AA /* AppDelegate.swift */; };
@@ -52,6 +51,7 @@
 		DE95FB6B2AE0E9A400933D90 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6A2AE0E9A400933D90 /* DetailView.swift */; };
 		DE95FB6E2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */; };
 		DE95FB702AE1587500933D90 /* CollectionViewTagType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */; };
+		DEA2F7172B5D5E1F00C4D0AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEA2F7162B5D5E1F00C4D0AA /* GoogleService-Info.plist */; };
 		DEBB216D2AC959DE00B00A26 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216C2AC959DE00B00A26 /* WriteView.swift */; };
 		DEBB216F2AC959E900B00A26 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBB216E2AC959E900B00A26 /* WriteViewController.swift */; };
 		DED7786C2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7786B2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift */; };
@@ -72,7 +72,6 @@
 		DE43BD3D2ACE8A5500FD81DD /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
 		DE6D2AFD2ADDD34A00694CB0 /* MemoryAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAnnotation.swift; sourceTree = "<group>"; };
 		DE73165D2B025FCC00F20E8D /* DataControlError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControlError.swift; sourceTree = "<group>"; };
-		DE8089E12B0388F100150777 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE843D632ADEC5C4008E065D /* SummaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE843D652ADEC64B008E065D /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE8939382AC1954D0099D1AA /* MapMyMemories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapMyMemories.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +104,7 @@
 		DE95FB6A2AE0E9A400933D90 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailView.swift; path = MapMyMemories/Scene/DetailView.swift; sourceTree = SOURCE_ROOT; };
 		DE95FB6D2AE1077F00933D90 /* ViewingImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE95FB6F2AE1587500933D90 /* CollectionViewTagType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTagType.swift; sourceTree = "<group>"; };
+		DEA2F7162B5D5E1F00C4D0AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEBB216C2AC959DE00B00A26 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		DEBB216E2AC959E900B00A26 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		DED7786B2AE54AF300629034 /* ViewingEmotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewingEmotionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 				DE8939582AC197640099D1AA /* Scene */,
 				DE8939572AC1975A0099D1AA /* App */,
 				DE8939492AC1954F0099D1AA /* Info.plist */,
-				DE8089E12B0388F100150777 /* GoogleService-Info.plist */,
+				DEA2F7162B5D5E1F00C4D0AA /* GoogleService-Info.plist */,
 			);
 			path = MapMyMemories;
 			sourceTree = "<group>";
@@ -444,7 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE8939482AC1954F0099D1AA /* LaunchScreen.storyboard in Resources */,
-				DE8089E22B0388F100150777 /* GoogleService-Info.plist in Resources */,
+				DEA2F7172B5D5E1F00C4D0AA /* GoogleService-Info.plist in Resources */,
 				DE8939452AC1954F0099D1AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +713,7 @@
 				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapMyMemories/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MapMory;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 지도에 표시하기 위해 위치 권한이 필요합니다. 현재 위치를 중심으로 초기 화면 설정 및 현재 위치 지도 보기를 수행합니다. 권한 거부시 서울 시청을 중심으로 초기 화면이 설정됩니다. 권한은 설정을 통해 언제든지 변경이 가능합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -750,6 +751,7 @@
 				ENABLE_APP_SANDBOX = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapMyMemories/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MapMory;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 지도에 표시하기 위해 위치 권한이 필요합니다. 현재 위치를 중심으로 초기 화면 설정 및 현재 위치 지도 보기를 수행합니다. 권한 거부시 서울 시청을 중심으로 초기 화면이 설정됩니다. 권한은 설정을 통해 언제든지 변경이 가능합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
