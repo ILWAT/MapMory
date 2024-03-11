@@ -12,6 +12,7 @@
 - 위치, 사진, 텍스트를 포함한 사용자 기록 저장
 - 위치 검색 기능
 - 현재 위치 표시 및 이동
+- 다크 모드 지원
 
 ------
 **📋핵심 기술**
@@ -22,7 +23,8 @@
 - `CoreLocation`을 사용한 사용자 현재 위치 확인 구현
 - `PHPickerViewController`를 활용한 사용자 사진 입력 구현
 - `Firebase Crashlytics`를 활용한 Run Time Error 추적 및 관리
--  `Toast`를 사용한 사용자 Notification 구현
+- `Toast`를 사용한 사용자 Notification 구현
+- `systemColor` or `Asset Color Set`을 활용한 다크모드 지원
 - `EmojiPicker`를 통한 이모지 입력 구현
 
 
